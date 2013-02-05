@@ -1,0 +1,11 @@
+development:
+  app_id:     403939599677058
+  app_secret: 0bf865849f4a6904d603fbd99bb4e3fb
+
+test:
+  app_id:     403939599677058
+  app_secret: 0bf865849f4a6904d603fbd99bb4e3fb
+
+production:
+  app_id:     <%= ENV['FACEBOOK_APP_ID'] %>
+  app_secret: <%= ENV['FACEBOOK_APP_SECRET'] %>

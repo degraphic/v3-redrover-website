@@ -1,0 +1,35 @@
+%ul.search_results
+  %li.title Events
+  - 3.times do 
+    %li.result
+      =image_tag('child.jpg')
+      .info
+        %h4.title I Am An Artist
+        %h4.place New York Public Library
+        %h5.date Sat, Dec 8th, 10:00 am
+  %li.title Publishers
+  - 3.times do 
+    %li.result
+      =image_tag('nypl.jpg')
+      .info
+        %h4.title I Am An Artist
+        %h4.place New York Public Library
+        %h5.date Sat, Dec 8th, 10:00 am
+  %li.title Places
+  - 2.times do 
+    %li.result
+      =image_tag('moma.jpg')
+      .info
+        %h4.title I Am An Artist
+        %h4.place New York Public Library
+        %h5.date Sat, Dec 8th, 10:00 am
+  %li.more 
+    %p
+      %a{:href => '#'}
+        See more results from
+        %span="A"
+    %p
+      Displaying top 
+      %span="8"
+      results.
+

@@ -1,0 +1,1 @@
+V3RedroverWebsite.FeaturedEventsController = Ember.ArrayController.extend V3RedroverWebsite.StarrableModelController

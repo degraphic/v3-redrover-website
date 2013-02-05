@@ -1,0 +1,180 @@
+%h1.title Featured Events Page
+#featured-page.filter-controls.well
+  .top_controls
+    .btn-toolbar
+      #dateButtons.btn-group.filter{'data-toggle' => 'buttons-radio'}
+        %button.btn.active Today
+        %button.btn Tomorrow
+        %button.btn Weekend
+        %button.btn Calendar   
+        %input#calendarDate{type:"hidden" , _action:'calendarEvents on="change" target="view"'}
+      .btn-group.within
+        %p within  
+      .btn-group.filter#miles
+        %button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+          0.5 mi
+          %span.caret
+        %ul.dropdown-menu
+          %%li
+            %a{:href => "#"} 1 mile
+          %li
+            %a{:href => "#"} 2 miles
+          %li
+            %a{:href => "#"} 5 miles
+          %li
+            %a{:href => "#"} 10+ miles
+    .additional
+      %p#show_filter
+        Show Additional Filters
+        %span.caret.down
+  #moreFilter.bottom_controls.hide
+    %form.form-inline
+      %h3 Results Near
+      %input.Location{:placeholder => "Current Location", :type => "text"}
+      %h4 eg playgrounds, museums
+    .btn-toolbar
+      #ageButtons.btn-group.filter{'data-toggle' => 'buttons-radio'}
+        %button.btn Baby and Toddlers
+        %button.btn Kids And Teens
+        %button.btn Grown Ups Only  
+      .btn-group.filter.pull-right
+        %button.btn.btn-primary{:type => "submit"} Filter        
+    %form.starred.form-inline
+      %label.checkbox
+        %input{:type => "checkbox"}
+          Starred by People I Follow
+      %label.checkbox
+        %input{:type => "checkbox"}
+          Most Starred on RedRover
+
+.alert.alert-default.callout  
+  %button.close{"data-dismiss" => "alert", :type => "button"} ×
+  %p 
+    %span Get started by connecting to RedRover today!
+    %button.btn.btn-primary Get Started 
+
+#featured-events-list
+  .row
+    .event.large.span14
+      .image
+        .wrap
+        = image_tag('child.jpg')
+      %span.featured-tag Featured
+      %span.icomoon-star.top
+      .info
+        .top
+          = image_tag('history.jpg')
+          .header
+            .place="Museum of Natural History"
+            %h4.title="Some event name bla bla bla"
+            %h6.branch="Branch Name"
+        .bar
+          August 5th, 2012
+          %span
+            3:00pm
+        .description="Lurem ipsoom dulur seet emet, cunsectetoor edeepisicing ileet, sed du ieeoosmud tempur inceedidoont ut lebure-a it dulure-a megna eleeqooa. Ut ineem ed meenim feneeem, qooees nustrood ixerceeteshun ullemcu leburees neesi ut eleeqooip ix ia cummudu cunseqooet. Um de hur de hur de hur. Dooees oote-a iroore-a dulur in reprehendereet in fulooptete-a feleet isse-a ceelloom dulure-a ioo foogeeet noolla pereeetoor. Hurty flurty schnipp schnipp! Ixcepteoor seent oocceecet coopeedetet nun prueedent, soont in coolpa qooee ooffffeecia deseroont mulleet uneem id ist leburoom."
+        .icons
+          %a{:href => '#'}
+            %span.icomoon-envelope Share
+          %a{:href => '#'}
+            %span.icomoon-star Save    
+    - 4.times do
+      .event.small.span7
+        .image
+          .wrap
+            = image_tag('child.jpg', :class => 'bg')
+        .info
+          .top
+            = image_tag('history.jpg')
+            .header
+              .place="Museum of Natural History"
+              %h4.title="Some event name bla bla bla"
+              %h6.branch="Branch Name"
+          .bar
+            August 5th, 2012
+            %span
+              3:00pm
+          .description="Lurem ipsoom dulur seet emet, cunsectetoor edeepisicing ileet, sed du ieeoosmud tempur inceedidoont ut lebure-a it dulure-a megna eleeqooa. Ut ineem ed meenim feneeem, qooees nustrood ixerceeteshun ullemcu leburees neesi ut eleeqooip ix ia cummudu cunseqooet. Um de hur de hur de hur. Dooees oote-a iroore-a dulur in reprehendereet in fulooptete-a feleet isse-a ceelloom dulure-a ioo foogeeet noolla pereeetoor. Hurty flurty schnipp schnipp! Ixcepteoor seent oocceecet coopeedetet nun prueedent, soont in coolpa qooee ooffffeecia deseroont mulleet uneem id ist leburoom."
+          .icons
+            %a{:href => '#'}
+              %span.icomoon-envelope Share
+            %a{:href => '#'}
+              %span.icomoon-star Save    
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped
+      #featured-page.filter-controls.well
+        .top_controls
+          .btn-toolbar
+            .btn-group.filter{'data-toggle' => 'buttons-radio'}
+              %button.btn.active Today
+              %button.btn Tomorrow
+              %button.btn Weekend
+              %button.btn Calendar  
+            .btn-group.within
+              %p within  
+            .btn-group.filter#miles
+              %button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+                0.5 mi
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} 1 mile
+                %li
+                  %a{:href => "#"} 2 miles
+                %li
+                  %a{:href => "#"} 5 miles
+                %li
+                  %a{:href => "#"} 10+ miles
+          .additional
+            %p 
+              Show Additional Filters
+              %span.caret.down
+        .bottom_controls
+          .results
+            %form.form-inline
+              %h3 Results Near
+              %input.Location{:placeholder => "Current Location", :type => "text"}
+              %h4 eg playgrounds, museums
+          .btn-toolbar
+            .btn-group.filter{'data-toggle' => 'buttons-radio'}
+              %button.btn.active 0 - 1
+              %button.btn 2 - 4
+              %button.btn 5 - 8
+              %button.btn 9 - 12  
+              %button.btn 13 - 18
+              %button.btn Grown Ups Only  
+            .btn-group.filter.pull-right
+              %button.btn.btn-primary{:type => "submit"} Filter        
+          .starred_row
+            %form.form-inline
+              %label.checkbox
+                %input{:type => "checkbox"}
+                  Starred by People I Follow
+              %label.checkbox
+                %input{:type => "checkbox"}
+                  Most Starred on RedRover
+        
+      #featured-events-list
+        .row
+          .event.small.span7
+            .image
+              .wrap
+                %img.bg{:src => "images/child.jpg"}
+            .info
+              .top
+                %img{:src => "images/history.jpg"}
+                .header
+                  .place="Museum of Natural History"
+                  %h4.title="Some event name bla bla bla"
+                  %h6.branch="Branch Name"
+              .bar
+                August 5th, 2012
+                %span
+                  3:00pm
+              .description="Lurem ipsoom dulor"
+              .icons
+                %a{:href => '#'}
+                  %span.icomoon-envelope Share
+                %a{:href => '#'}
+                  %span.icomoon-star Save  

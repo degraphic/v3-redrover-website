@@ -1,0 +1,39 @@
+#my-redrover
+  .my-info.row  
+    .span7  
+      %img#my_profile_picture{:bind => { :src => 'V3RedroverWebsite.currentUser.profile_picture_medium' }}
+
+      =hb '#if view.isEditing'
+      /%button{class: 'btn btn-large btn-block'} Upload New Photo
+      /%button{class: 'btn btn-large btn-block'} Refresh From Facebook
+      =hb '/if'
+    
+    .span14
+      
+      =hb '#unless view.isEditing'
+      %h3.pull-right
+        %a#edit_profile.edit{ _action: 'toggleEdit target="view"', href: true} Edit
+      %h1#my_full_name= hb 'fullName'
+      %p= hb 'bio'
+      %a{ :_action => 'goToBrowseActivities user href=true' }
+        Activities
+      
+      =hb 'else'
+      .control-group.span14
+        %label Name:
+        .controls
+          =hb 'view Ember.TextField valueBinding="firstName" viewName="firstNameField" id="edit_first_name"'
+      .control-group.span14
+        .controls
+          =hb 'view Ember.TextField valueBinding="lastName" viewName="lastNameField" id="edit_last_name"'
+      .control-group.span14 
+        %label Bio
+        .controls
+          =hb 'view Ember.TextArea valueBinding="bio" viewName="bioField" id="edit_bio"'
+      .offset1.span14
+        %button{ _action: 'saveUserProfile target="view"', class: 'btn btn-success', type: 'button'} Save
+        %button{_action: 'toggleEdit target="view"', class: 'btn', type: 'button'} Cancel
+      =hb '/unless'
+
+  =hb "view V3RedroverWebsite.StarredEventsView"
+  =hb "view V3RedroverWebsite.StarredPlacesView"

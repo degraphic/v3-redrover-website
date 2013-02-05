@@ -1,0 +1,7 @@
+.detail_view
+  %a{:_action => 'goToPlace this href=true'}
+    .detail-image
+      %img{:bind => { :src => 'image_medium' } }
+    .header
+      .name=hb 'name'
+%hr/

@@ -1,0 +1,48 @@
+// features nav
+ul.features_nav
+  margin: auto
+  list-style: none
+  > li > a, 
+  > li > .btn-group > a 
+    background: image_url('features_nav.png')
+    +dim(80px, 90px)
+    display: block
+    cursor: pointer
+    &.featured
+      background-position: 0 0        
+      &:hover
+        background-position: -80px 0
+    &.my_redrover
+      background-position: 0 -90px
+      &:hover
+        background-position: -80px -90px
+    &.fun
+      background-position: 0 -180px
+      &:hover
+        background-position: -80px -180px
+    &.doing
+      background-position: 0 -270px
+      &:hover
+        background-position: -80px -270px
+    &.browse
+      background-position: 0 -360px
+      &:hover
+        background-position: -80px -360px
+  > li.active > a 
+    &.featured 
+      background-position: -160px 0
+    &.my_redrover
+      background-position: -160px -90px
+    &.fun
+      background-position: -160px -180px
+    &.doing
+      background-position: -160px -270px
+    &.browse
+      background-position: -160px -360px
+  > li > .btn-group.open > a
+    +box-shadow(none)     
+    background: image_url('features_nav.png') 
+    &.my_redrover, &.my_redrover:hover
+      background-position: -80px 320px      
+    &.browse, &.browse:hover
+      background-position: -80px 80px

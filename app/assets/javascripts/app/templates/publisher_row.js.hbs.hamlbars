@@ -1,0 +1,26 @@
+%h2
+  =hb "title"
+.row
+  .place-publisher.span4
+    %img{:bind => { :src => 'image_thumb' } }
+    =hb "if V3RedroverWebsite.currentUser.isLoggedIn" do
+      {{#if following}}
+      %button.btn.btn-follow.following{ :_action => 'unfollow target="view"' }
+        %span.following="Following"
+        %span.unfollow="Unfollow"
+      {{else}}
+      %button.btn.btn-follow.follow{ :_action => 'follow target="view"' }
+        %span.follow="Follow"
+      {{/if}}
+  .place-publisher-events.span17
+    .row
+      =hb "unless view.firstPage" do
+        .arrow.span1
+          %a{:_action => 'backPage target="view"'}
+            %span.icomoon-leftarrow
+      =hb "with events" do
+        =hb 'view V3RedroverWebsite.EventsAtPublisherView'
+      =hb "if view.hasNext" do
+        .arrow.span1
+          %a{:_action => 'nextPage target="view"'}
+            %span.icomoon-rightarrow

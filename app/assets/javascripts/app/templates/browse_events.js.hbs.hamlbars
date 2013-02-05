@@ -1,0 +1,9 @@
+#browse
+  %h1 Browse All Events
+  =hb "view V3RedroverWebsite.SearchPanelView"
+  %img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.visibility'} }
+
+  #events-section
+    =hb '#each rows'
+    =hb 'view V3RedroverWebsite.BrowseEventRowView'
+    =hb '/each'

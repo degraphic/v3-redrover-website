@@ -1,0 +1,52 @@
+#featured-page.filter-controls.well
+  .top_controls
+    .btn-toolbar
+      #dateButtons.btn-group.filter{'data-toggle' => 'buttons-radio'}
+        %button.btn.active{ _action:'todayEvents target="view"' } Today
+        %button.btn{ _action:'tomorrowEvents target="view"' } Tomorrow
+        %button.btn{ _action:'weekendEvents target="view"' } Weekend
+        %button.btn{ _action:'showCalendarInput target="view"' }  Calendar   
+        %input#calendarDate{type:"hidden" , _action:'calendarEvents on="change" target="view"'}
+      .btn-group.within
+        %p within  
+      .btn-group.filter#miles
+        %button#distanceTrigger.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+          =hb 'view.filterDistance.distance'
+          %span MI
+          %span.caret
+        %ul#distances.dropdown-menu
+          %li
+            %a{_action:'additionalMileDistance target="view" on="click"', href: "#" , :"data-distance"=>0.5 } 0.5 mile
+          %li
+            %a#distanceOne{_action:'addMileDistance target="view" on="click"', href: "#" , :"data-distance"=>1 } 1 mile
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#" ,  :"data-distance"=> 2  }2 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 5  } 5 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 25  } 25 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 10000  } 10+ miles
+    .additional
+      %p#show_filter{_action:'toggleMoreFilter on="click" target="view"'}
+        Show Additional Filters
+        %span.caret.down
+  #moreFilter.bottom_controls.hide
+    .form-inline
+      %h3 Results Near
+      =hb 'view Ember.TextField valueBinding="view.location" class="location" placeholder="Current Location" id="locationAutocomplete"'
+      %h4 eg playgrounds, museums
+    .btn-toolbar
+      #ageButtons.btn-group.filter{'data-toggle' => 'buttons-radio'}
+        %button.btn{ _action:'filterForBaby target="view"' } Baby and Toddlers
+        %button.btn{ _action:'filterForKidsAndTeens target="view"' } Kids And Teens
+        %button.btn{ _action:'filterForAdults target="view"' } Grown Ups Only  
+      .btn-group.filter.pull-right
+        %button.btn.btn-primary{_action:'filter on="click" target="view"'} Filter        
+    %form.starred.form-inline
+      %label.checkbox
+        =hb 'view Ember.Checkbox checkedBinding="view.filterFollowers.by_followers" id="events_by_followers"'
+        Starred by People I Follow
+      %label.checkbox
+        =hb 'view Ember.Checkbox checkedBinding="view.filterStarred.most_starred" id="events_by_starred"'
+        Most Starred on RedRover

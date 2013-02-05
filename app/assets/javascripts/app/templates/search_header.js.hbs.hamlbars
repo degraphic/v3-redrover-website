@@ -1,0 +1,3 @@
+%form.navbar-search.pull-left
+  =hb 'view V3RedroverWebsite.SearchTextField valueBinding="view.text" placeholder="Search" autocomplete="off" id="search_input" class="search-query" action="search" target="parentView"'
+  =hb 'outlet autocompleteResult'

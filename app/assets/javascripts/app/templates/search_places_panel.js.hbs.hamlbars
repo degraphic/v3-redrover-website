@@ -1,0 +1,58 @@
+#featured-page.well
+  .top_controls
+    %h3 Category
+    .btn-group.filter#category
+      %button#categoryTrigger.btn.dropdown-toggle{_action:'refreshMultiOption target="view"',  "data-toggle" => "dropdown"} 
+        Categories
+        %span.caret
+      %ul#categories.dropdown-menu
+        =hb 'each categories' do
+          %li
+            %a.multicheck{_action:'selectedCategory this.id target="view"', href: "#"}
+              %span.pull-right
+              =hb 'name'
+  .form-inline
+    %h3 Results Near
+    .btn-toolbar
+      =hb 'view Ember.TextField class="location" valueBinding="view.currentLocation" placeholder="Current Location" id="locationAutocomplete"'
+      .btn-group.within
+        %p within  
+      .btn-group.filter#miles
+        %button#distanceTrigger.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+          =hb 'view.filterDistance.distance'
+          %span MI
+          %span.caret
+        %ul#distances.dropdown-menu
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#" , :"data-distance"=>0.5 } 0.5 mile
+          %li
+            %a#distanceOne{_action:'addMileDistance target="view" on="click"', href: "#" , :"data-distance"=>1 } 1 mile
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#" ,  :"data-distance"=> 2  }2 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 5  } 5 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 25  } 25 miles
+          %li
+            %a{_action:'addMileDistance target="view" on="click"', href: "#",  :"data-distance"=> 10000  } 10+ miles
+    %h4 eg playgrounds, museums
+    %h3 Tags
+    %ul.nav.nav-pills
+      %li.active
+        %a Redrover picks
+      %li
+        %a Clean Bathrooms
+      %li
+        %a Kid Friendly
+      %li
+        %a Good For Groups
+  %form.starred.form-inline
+    %label.checkbox
+      =hb 'view Ember.Checkbox checkedBinding="view.by_followers" class="by_followers"'
+      Starred by People I Follow
+    %label.checkbox
+      =hb 'view Ember.Checkbox checkedBinding="view.most_starred" class="most_starred"'
+      Most Starred on RedRover
+    .btn-group.filter.pull-right
+      %button.btn.btn-primary{_action:'filter on="click" target="view"'} Filter
+  #map.hidden

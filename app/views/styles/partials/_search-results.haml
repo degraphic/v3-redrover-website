@@ -1,0 +1,40 @@
+:javascript
+  $(function(){
+    $('ul.results-category li').click(function(){
+      if ($(this).hasClass('active')){
+        return false;
+      }
+      else {
+        $('ul.results-category li').removeClass();
+        $(this).addClass('active');
+      }
+    });
+  });
+%h1.title Search Results Page
+#search-results
+  %h1 Search Results
+  %span.search-header.label All
+  .row.rel    
+    .span15.results-wrap
+      %ul.results-list 
+        - 11.times do 
+          %li.result
+            =image_tag('nypl.jpg')
+            .info
+              %h4.title I Am An Artist
+              %h4.place New York Public Library
+              %h5.date Sat, Dec 8th, 10:00 am
+          %hr/
+    %ul.results-category
+      %li.active
+        ="All"
+        %span="(250)"      
+      %li
+        ="Events"
+        %span="(110)"      
+      %li
+        ="Publishers"
+        %span="(90)"      
+      %li
+        ="Places"
+        %span="(50)"

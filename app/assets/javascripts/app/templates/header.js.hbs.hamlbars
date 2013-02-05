@@ -1,0 +1,11 @@
+.navbar.navbar-responsive-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "#"}
+      .nav-collapse
+        =hb 'view V3RedroverWebsite.SearchHeaderView'
+        =hb 'view V3RedroverWebsite.UserHeaderView'

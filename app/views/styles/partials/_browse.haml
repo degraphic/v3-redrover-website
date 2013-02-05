@@ -1,0 +1,70 @@
+%h1.title Browse Page
+#browse
+  %h1 Browse All Places
+  .filter-controls.well
+    .top_controls
+      .btn-toolbar
+        .btn-group.filter{'data-toggle' => 'buttons-radio'}
+          %button.btn.active Today
+          %button.btn Tomorrow
+          %button.btn Weekend
+          %button.btn Calendar  
+      .results
+        %form.form-inline
+          %h3 Results Near
+          %input.location{:placeholder => "Current Location", :type => "text"}
+          %h4 eg playgrounds, museums
+  .row
+    .span21
+      .reading
+        %h2 Browse Events Divs (two styles for different image sizes)             
+        .row   
+          - 2.times do
+            .span5
+              .detail_view.well
+                .inner
+                  .image
+                    = image_tag('moma.jpg')
+                  .header
+                    %h5.place="New York Public Library"
+                    %h3.title="Be a Poet!"
+                    %h5.branch="Melrose Library"
+                    %h5.date="Tues. Aug 21st 4pm"     
+            .span5
+              .detail_view.well
+                .inner
+                  .image
+                    .wrap
+                      = image_tag('child.jpg')
+                  .header
+                    %h5.place="New York Public Library"
+                    %h3.title="Be a Poet! This is a two line title"
+                    %h5.branch="Melrose Library"
+                    %h5.date="Tues. Aug 21st 4pm"     
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped
+      #browse
+        %h1 Browse All Places
+        .filter-controls.well
+          .top_controls
+            .btn-toolbar
+              .btn-group.filter{'data-toggle' => 'buttons-radio'}
+                %button.btn.active Today
+                %button.btn Tomorrow
+                %button.btn Weekend
+                %button.btn Calendar  
+            .results
+              %form.form-inline
+                %h3 Results Near
+                %input.location{:placeholder => "Current Location", :type => "text"}
+                %h4 eg playgrounds, museums
+      .detail_view.well
+        .inner
+          .image
+            = image_tag('moma.jpg')
+          .header
+            %h5.place="New York Public Library"
+            %h3.title="Be a Poet!"
+            %h5.branch="Melrose Library"
+            %h5.date="Tues. Aug 21st 4pm"   

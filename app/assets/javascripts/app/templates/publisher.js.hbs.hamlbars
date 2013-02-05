@@ -1,0 +1,40 @@
+#publisher-detail
+  .row
+    .span21
+      .row
+        .span5
+          %img.pub{:bind => { :src => 'image_medium' } }
+        .publisher-info.span16
+          .row
+            .span14
+              %h2=hb 'title'
+              %p=hb 'description'
+            .span2
+              %span.icomoon-share{"data-toggle" => "modal", :href => "#share-modal"}
+            .publisher-links.span16
+              %a{:bind => { :href => 'website_url'} } website
+              {{#if facebook_url}}
+              %a{:href => '#'}
+                %span.icomoon-facebook
+              {{/if}}
+              {{#if twitter_url}}
+              %a{:href => '#'}
+                %span.icomoon-twitter
+              {{/if}}
+            .publisher-follow.span16
+              {{#if following}}
+              %button#unfollow_publisher.btn.btn-follow
+                %span{ :_action => 'unfollow target="parentView"' }
+                  Unfollow
+              {{else}}
+              %button#follow_publisher.btn.btn-follow
+                %span{ :_action => 'follow target="parentView"' }
+                  Follow
+              {{/if}}
+      
+      %hr.no-bottom
+      %h2 Events from this Publisher
+      .row
+        =hb '#each events'
+        =hb 'view V3RedroverWebsite.PublisherEventView'
+        =hb '/each'

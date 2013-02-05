@@ -1,0 +1,10 @@
+%li.result
+  %a{:_action => 'goToEvent this href=true'}
+    %img{:bind => { :src => 'publisher.image_medium' } }
+    .info
+      %h4.title=hb 'title'
+      %h4.place=hb 'place.name'
+      %h5.date
+        =hb 'formatDate start_date'
+        ,
+        =hb 'formatTime start_time'

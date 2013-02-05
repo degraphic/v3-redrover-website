@@ -1,0 +1,66 @@
+body, html
+  height: 100%
+  zoom: 1 
+
+body
+  +futura
+
+header + .container
+  min-height: 1000px
+
+hr 
+  border-top: 1px solid rgba(0,0,0,.3)
+  &.no-bottom 
+    margin-bottom: 0
+  &.no-top 
+    margin-top: 0
+
+.caret
+  &.up 
+    +rotate(180deg)
+    
+h1
+  +museo
+  color: $font_normal
+  font-weight: normal
+  &.title
+    color: $gray
+    text-shadow: 0 1px rgba(255,255,255,.5)
+    font-family: helvetica neue
+    font-weight: 300
+    margin: .5em 0 .5em
+    +gradient-vertical($nav_base, darken($nav_base, 5%))
+    +border-radius(4px)
+    +bs
+    padding: 10px
+  
+h2, h3, h4, h5, h6, p
+  +futura
+  font-weight: normal
+  line-height: 1.2em
+  margin: .5em 0 .5em
+  color: $font_normal
+h2
+  font-size: 26px
+h3
+  font-size: 19px
+h4
+  font-size: 16px
+h5
+  font-size: 15px
+  color: $font_light
+h6
+  font-size: 13px
+p
+  font-size: 15px
+
+a 
+  color: $gray
+  &:hover 
+    text-decoration: none
+    color: lighten($teal, 10%)
+
+.icomoon-share:hover 
+  cursor: pointer
+
+

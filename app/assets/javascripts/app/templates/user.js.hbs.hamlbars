@@ -1,0 +1,18 @@
+#user-details
+  .user-info.row
+    .span7
+      %img#user_profile_picture{:bind => { :src => 'profile_picture_medium' }}
+
+    .span14
+
+      %h1#user_full_name= hb 'full_name'
+      %p=hb 'bio'
+
+      =hb 'if V3RedroverWebsite.currentUser.isLoggedIn' do
+        =hb 'if isLoaded' do
+          =hb 'if starred_by_current_user' do
+            %button#unfollow_user.btn.btn-icomoon{ :_action => 'unfollow target="parentView"' }
+              %span.icomoon-star Unfollow
+            =hb 'else'
+            %button#follow_user.btn.btn-icomoon{ :_action => 'follow target="parentView"' }
+              %span.icomoon-star Follow

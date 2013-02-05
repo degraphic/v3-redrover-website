@@ -1,0 +1,38 @@
+#browse
+  %h1 Browse All Places
+  =hb 'view V3RedroverWebsite.SearchPlacesPanelView categoriesBinding="categories"'
+  %img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.spinnerToggle'} }
+  
+  =hb "#if categorizedPlaces"
+  =hb 'each categorizedPlaces' do
+    .place-category
+      %h2= hb 'category.name'
+      .bxslider
+        =hb 'each places' do
+          .slide.place
+            %a{:_action => "goToPlace this href=true"}
+              .detail_view.well
+                .inner
+                  %img{:bind => {:src => 'image_medium'}}
+                  %h4 
+                    =hb 'name'
+                    %br
+                    =hb 'description'
+                  %p
+                    %span.icomoon-star
+                    (15) including Kathryn T. & 13 others...
+                  .follow
+                    %button.btn.btn-icomoon
+                      %span.icomoon-star
+                      Follow
+  =hb "/if"
+
+  =hb "#if view.notFoundResults"
+  #no_results  
+    %h1 
+      ="Place not found!"
+      %br 
+      Try expanding your search.
+  =hb "/if"
+
+     

@@ -1,0 +1,15 @@
+.event-carousel.span15
+  .row
+    =hb 'each this' do
+      %a{:_action => 'goToEvent this href=true'}
+        .span5
+          .detail_view
+            %img{:bind => { :src => 'image_medium' } }
+            .header
+              .title 
+                %h5.title=hb "place.name"
+              %hr/
+              .date
+                =hb 'formatDate start_date'
+                ,
+                =hb 'formatTime start_time'

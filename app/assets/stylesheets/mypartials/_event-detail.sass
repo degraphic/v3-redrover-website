@@ -1,0 +1,224 @@
+#event-detail
+  +rel
+  h1, h2, h3, h4, h5, h6
+    margin: 0 0 0.4em
+  .image 
+    margin-bottom: 20px
+    +dim(100%, 300px)
+    overflow: hidden  
+    position: relative
+    .wrap
+      position: absolute
+      width: 826px 
+      img     
+        width: 100%
+  img.publisher 
+    +dim(114px, 114px)
+    +abs-l(-80px, 80px)
+    +bs 
+  .icomoon-star
+    +abs-r(20px, 250px)
+    &:before
+      color: red
+      font-size: 80px
+  .date 
+    +museo
+    color: $font_light
+  #more-events
+    .well
+      overflow: visible 
+    .more-events-scroll
+      overflow: auto
+      height: 600px
+  .info 
+    margin-top: 60px
+    +rel    
+    .icomoon-fair:before 
+      color: red    
+    .category, 
+    .facilities
+      margin: 1.5em 0 0.5em
+      > span > span
+        color: $teal 
+      .icomoon-tag:before
+        color: red
+        +rel 
+        top: -2px
+        font-size: 34px
+    a.purchase
+      float: right
+      font-size: 20px
+    .icomoon-share  
+      float: right
+      margin: 6px 20px 0 0
+      &:hover
+        cursor: pointer
+    .header 
+      p 
+        color: $teal
+      .place 
+        text-transform: uppercase
+    .type 
+      text-align: center 
+      img
+        width: 100%
+        margin-top: -10px
+    .map-info
+      h1, h2, h3, h4, h5, h6
+        margin-left: 24px
+        color: $font_normal
+      .address
+        min-height: 72px
+      .phone
+        min-height: 18px
+      .donation
+        +museo
+        font-size: 16px
+        margin: 20px 0
+        line-height: 1.2em
+        a 
+          color: $teal
+      .icomoon-location,
+      .icomoon-phone  
+        +abs-l(2px, -28px)
+        &:before
+          color: red
+    .map 
+      float: right
+      height: 176px
+      +box-shadow(0 0 1px black)
+      iframe
+        +box-shadow(0 0 1px black)
+  #more-events
+    hr 
+      clear: both
+    h4
+      text-transform: uppercase
+    .detail_view
+      min-height: 80px
+      img 
+        +box-shadow(none)
+    .detail-image 
+      width: 60px
+      float: left
+      margin-right: 10px
+    .header
+      float: left
+      font-size: 12px
+      line-height: 1.2em
+      width: 110px
+      .sale 
+        font-size: 14px 
+      .title
+        font-size: 13px
+    .detail-date,
+    .detail-address
+      color: $grayLight
+
+ul#save-calendar
+  list-style: none
+  margin: 0
+  b.caret
+    +abs-r(44px,10px)
+    +transition(.2s all ease-in-out)
+  .add-to-calendar
+    display: none
+  li 
+    padding: 0 14px
+    &:hover
+      cursor: pointer
+      background: white
+      a 
+        color: $gray
+  li.divider
+    height: 1px
+    overflow: hidden
+    background-color: #e5e5e5
+    border-bottom: 1px solid white
+  a 
+    display: block
+    padding: 4px 0
+
+#share-modal
+  display: none
+  border: 0 
+  +border-radius(2px)
+  .btn-share
+    padding: 4px 30px 
+    font-size: 16px
+  button.close
+    color: white
+    +opacity(100)
+    text-shadow: none
+    &:hover 
+      +opacity(80)
+  .modal-header 
+    border: 0
+    +gradient-vertical(lighten(#323230, 5%), #323230)
+    h3
+      +museo    
+      text-shadow: 0 1px 1px black
+      color: white
+  .btn-group
+    overflow: hidden 
+    button
+      min-height: 44px
+      font-size: 16px
+      padding: 10px 0
+      width: 188px
+      +border-radius(0)
+  .icomoon-facebook
+    &:before
+      color: #3A5794
+    &.active
+      +buttonBackground(lighten(#3A5794, 10%),#3A5794)
+      &:before
+        color: white
+  .icomoon-twitter
+    &:before
+      color: #43C5F5
+      margin-right: 6px
+    &.active
+      +buttonBackground(lighten(#43C5F5, 10%),#43C5F5)
+      &:before
+        color: white
+  .share-email.active
+    +buttonBackground(lighten($gray, 10%), $gray)
+  .modal-body
+    border-top: 1px solid white
+  textarea,
+  input
+    width: 100%
+    +box-sizing(border-box)
+  .share-facebook-body 
+    h3 
+      margin-top: 0
+  .share-facebook-image
+    width: 100%
+    float: left
+    +bs 
+  .share-email-body,
+  .share-twitter-body
+    display: none
+  .share-email-body 
+    .email-recipient, 
+    .icomoon-plus,
+    input 
+      float: left 
+    .email-recipient
+      width: 5%
+    input 
+      width: 85%
+      padding: 14px 
+    .icomoon-plus
+      float: right
+      height: 30px 
+      &:before 
+        font-size: 14px
+        color: $gray  
+        vertical-align: middle
+    .add-recipients 
+      display: none 
+      input   
+        margin-left: 5%
+

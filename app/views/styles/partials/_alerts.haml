@@ -1,0 +1,41 @@
+
+%h1.title Alerts
+.well
+  %h3 Default    
+  .alert.alert-default  
+    %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %strong Warning!
+    Best check yo self, you're not looking too good.
+  %h3 Bootstrap Defaults  
+  .alert.alert-error  
+    %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %strong Oh snap!
+    Change a few things up and try submitting again.
+  .alert.alert-success
+    %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %strong Well done! 
+    You successfully read this important alert message.  
+  .alert.alert-info  
+    %button.close{"data-dismiss" => "alert", :type => "button"} ×
+    %strong Heads up! 
+    This alert needs your attention, but it's not super important.
+
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped
+      .alert.alert-default  
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        %strong Warning!
+        ="Best check yo self, you're not looking too good."
+      .alert.alert-error  
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        %strong Oh snap!
+        ="Change a few things up and try submitting again."
+      .alert.alert-success
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        %strong Well done! 
+        ="You successfully read this important alert message."  
+      .alert.alert-info  
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        %strong Heads up! 
+        ="This alert needs your attention, but it's not super important."

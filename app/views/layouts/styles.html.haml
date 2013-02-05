@@ -1,0 +1,18 @@
+!!! html
+%head
+  = stylesheet_link_tag 'application', 'prettify', :media => 'screen, projection'
+  %script{:src => "/assets/styles/jquery.js", :type => "text/javascript"}
+  %script{:src => "/assets/styles/bootstrap.js", :type => "text/javascript"}
+  %script{:src => "/assets/styles/jquery.toggle.buttons.js", :type => "text/javascript"}
+  %script{:src => "/assets/styles/my_ui.js", :type => "text/javascript"}
+  %script{:src => "https://use.typekit.net/edt2lwa.js", :type => "text/javascript"}
+  :javascript
+    try{Typekit.load();}catch(e){}
+  != csrf_meta_tags    
+
+%body{:bgcolor => "white", :onload => "prettyPrint()"}
+  = render 'styles/partials/header'  
+  .container
+    != yield
+  = render 'styles/partials/footer' 
+%script{:src => "/assets/styles/load-prettyprint.js", :type => "text/javascript"}

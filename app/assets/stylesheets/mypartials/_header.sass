@@ -1,0 +1,120 @@
+.navbar 
+  +futura
+  .container
+    +grid-core-span($gridColumns, $gridColumnWidth, $gridGutterWidth)
+  .navbar-inner
+    background: $nav_base
+    height: 30px
+    +border-radius(0)
+  .divider-vertical
+    border-left: 1px solid darken($nav_base, 10%)
+    border-right: 1px solid lighten($nav_base, 10%)
+    margin: 0
+  .brand
+    display: block
+    +dim(110px, 35px)
+    background: image_url('header_logo.png') no-repeat 0 -4px
+    margin: 0 10px 0 -8px
+    padding: 0
+    background-size: 70%
+    margin: 3px 0 0
+  .navbar-search 
+    .search-query
+      +futura
+      font-size: 16px
+      line-height: 1.4
+      height: 16px
+      margin-top: 2px
+      width: 40%
+      +transition(.2s all ease-in-out)
+      &:focus
+        +box-shadow(0 0 2px rgba(255,0,0,.4))
+        border-color: rgba(255,0,0,.4)
+        width: 100%
+  ul.search_results
+    display: none 
+    background: white
+    border: 1px solid $search-border 
+    width: 350px
+    overflow: auto
+    height: auto
+    margin: 3px 0
+    position: absolute
+    z-index: 200
+    li.more,
+    li.title 
+      color: $gray
+      background: $grayLighter
+      padding: .25em
+      clear: both
+      border-bottom: 1px solid $search-border 
+      border-top: 1px solid $search-border 
+    li.title:first-child
+      border-top: 0
+    li.more 
+      border-bottom: 0
+      text-align: center
+      p 
+        margin: 0
+        a
+          color: darken($nav_base, 50%)
+          font-size: 16px
+          &:hover 
+            color: darken($nav_base, 40%)
+  .nav > li.flat.open > a
+    background: white
+    color: $teal
+  .nav > li > a,
+  .nav > li.flat > a
+    text-shadow: 0 1px rgba(255,255,255,.5)
+    color: $gray
+    &:hover 
+      background: white
+      color: darken($nav_base, 50%)
+    &:focus
+      outline: none
+    &.btn-header
+      padding: 4px 8px
+      +buttonBackground(lighten($teal, 10%), lighten($teal, 5%))
+    .profile_pic
+      +dim(20px, 20px)
+      display: inline-block
+      background: image_url('profile_pic.jpg') no-repeat
+      border: 2px solid white
+      +box-shadow(0 0 2px gray)
+      +zero
+      float: right
+      margin: -2px 3px 
+      &:hover
+        +box-shadow(0 0 2px red)     
+    b.caret
+      +abs-r(7px, 4px)
+  .dropdown-menu
+    top: 29px
+    right: -1px
+  #user-menu 
+    > .dropdown 
+      a.dropdown-toggle   
+        width: 100px
+      &.open .dropdown-toggle  
+        background: white
+        color: darken($nav_base, 50%)
+        +box-shadow(none)
+        b.caret 
+          border-top: 4px solid darken($nav_base, 50%)
+  #login-menu
+    .LP-login-form,          
+    .LP-registration-form
+      padding: 10px
+      form
+        margin: 0
+      .LP-error-msg
+        color: red
+        font-size: 12px
+      a
+        padding: 0
+        float: left
+      input[type="submit"] 
+        float: right
+        margin-bottom: 4px
+

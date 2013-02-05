@@ -1,0 +1,8 @@
+%h2 My Saved Places
+.row
+  = hb '#each rows'
+  .row
+    =hb '#each this'
+    =hb 'view V3RedroverWebsite.StarredPlaceView'
+    =hb '/each'
+  = hb '/each'

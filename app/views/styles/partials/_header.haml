@@ -1,0 +1,91 @@
+:javascript 
+  $(function(){
+    $('.navbar-search .search-query').focus(function(){
+      $('.search_results').fadeIn(200);
+    });
+    $('.navbar-search .search-query').focusout(function(){
+      $('.search_results').fadeOut(200);
+    });
+  });
+.navbar.navbar-responsive-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{:href => "#"}
+      .nav-collapse
+        %form.navbar-search.pull-left
+          %input.search-query{:placeholder => "Search", :type => "text"} 
+          = render "styles/partials/search_results_bar"
+        / - if @id
+        %ul#user-menu.nav.pull-right
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"} 
+              ="User Name"
+              .profile_pic
+              %b.caret              
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} My RedRover
+              %li
+                %a{:href => "#"} Settings
+              %li
+                %a{:href => "#"} Find/Invite Friends
+              %li
+                %a{:href => "#"} Help
+              %li.divider
+              %li
+                %a.LP-logout{:href => "#"} Log Out
+        / - else
+        %ul#login-menu.nav.pull-right
+          %li.divider-vertical
+          %li.flat
+            %a{"data-toggle" => "modal", :href => "#signup-modal", :role => "button"} Sign Up
+          %li.divider-vertical
+          %li.dropdown.flat
+            %a{"data-toggle" => "dropdown", :href => "#"}  Log In
+            %ul.dropdown-menu
+              %li
+                .LP-login-form   
+                  %form
+                    %fieldset
+                      %input{:placeholder => "Email", :type => "email"}    
+                      %input{:placeholder => "Password", :type => "password"}
+                        %button.btn.btn-primary.pull-right{:type => "submit"} Log In
+                        %button.btn.btn-fb.btn-login.icomoon-facebook
+                        %button.btn.btn-tw.btn-login.icomoon-twitter
+          %li.divider-vertical      
+
+            #signup-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+              .modal-body
+                %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+                %h2 Sign Up to
+                = image_tag('header_logo.png')
+                .buttons
+                  %button.btn.btn-signup.btn-fb.icomoon-facebook Connect with Facebook
+                  %button.btn.btn-signup.btn-tw.icomoon-twitter Connect with Twitter
+                  %button.btn.btn-signup.btn-email.icomoon-envelope Connect with Email
+                %p 
+                  Already a Member?
+                  %a{:href => '#'} Sign In
+                .signup-form
+                  %form.form-horizontal
+                    .control-group
+                      %input{:placeholder => "First Name", :type => "text"}
+                    .control-group
+                      %input{:placeholder => "Last Name", :type => "password"}             
+                    .control-group
+                      %input{:placeholder => "Email", :type => "text"}
+                    .control-group
+                      %input{:placeholder => "Password", :type => "password"}
+                    %button.btn.btn-primary.pull-right{:type => "submit"} Connect Now
+
+
+
+          / %li.dropdown
+          /   %a.btn.btn-header{"data-toggle" => "dropdown", :href => "#"}  Sign Up
+          /   %ul.dropdown-menu
+          /     %li
+          /       .LP-registration-form

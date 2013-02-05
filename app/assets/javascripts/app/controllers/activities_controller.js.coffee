@@ -1,0 +1,1 @@
+V3RedroverWebsite.ActivitiesController = Ember.ObjectController.extend

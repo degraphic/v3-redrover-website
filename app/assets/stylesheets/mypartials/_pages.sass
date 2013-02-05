@@ -1,0 +1,334 @@
+#more-events
+  > .well 
+    overflow: auto
+    +border-radius(4px 4px 0 0)
+  .more 
+    background: #E6E6E6  
+    +border-radius(0 0 4px 4px)
+    margin-top: -32px
+    text-align: center
+    color: #B4B4B4
+    padding: 4px 0 0
+    &:hover 
+      cursor: pointer 
+      color: white
+  h4 
+    margin-top: 0
+  .span5 
+    margin: auto
+  hr 
+    margin: 10px 0
+  .detail_view
+    min-height: 0
+    border: 0
+    .image 
+      width: 100%
+      height: 135px
+
+#fun
+  .btn-group button
+    padding: 10px 16px
+        
+#featured-events-list,
+#browse
+  .icomoon-star.top
+    position: absolute
+    top: 20px
+    right: 10px
+    font-size: 40px
+    &:before
+      text-shadow: 0 0 1px black
+      color: red
+
+#fun, 
+#browse,
+#my-redrover
+  .span5
+    width: 196px
+
+// my redrover
+#my-redrover
+  .my-info
+    h1, h2, h3
+      display: inline
+    h2
+      margin-right: 20px
+    h3.pull-right
+      margin-top: .3em
+    .icomoon-star2:before
+      color: red
+    p
+      min-height: 112px
+  .my-places
+    margin-bottom: 20px
+  .saved-place
+    +bs
+    overflow: auto
+    .inner 
+      padding: 10px 0 
+    h1, h2, h3, h4, h5, h6
+      margin: .25em 0
+    .type
+      text-align: center
+.edit-info
+  img
+    +dim(266px, 199px)
+  input, textarea
+    width: 97%
+  .control-label
+    width: 0
+  .controls 
+    margin-left: 60px
+  button 
+    float: right
+    margin: 20px 0 0 10px
+
+
+#signup-modal
+  outline: none
+  width: 400px
+  margin: -200px 0 0 -200px  
+  .modal-body
+    text-shadow: 0 1px 0 rgba(255,255,255,.4)
+    overflow: auto
+    max-height: none
+    text-align: center
+    h2, img
+      display: inline
+    img
+      margin-top: -15px
+    a
+      +link-color(lighten($teal, 10%))
+    .buttons,
+    .signup-form
+      margin: 20px auto
+      width: 255px
+      input 
+        width: 240px
+        +transition(.3s all ease-in-out)
+        +futura
+        font-size: 18px
+        line-height: 1.3em
+        &:focus
+          border-color: none
+          +box-shadow(0 0 2px lighten($teal, 10%))
+      .btn-primary
+        font-size: 24px
+        padding: 8px 10px
+    .signup-form
+      display: none
+
+#settings 
+  h2
+    margin: 0 0 1em 0
+  form
+    margin-bottom: 30px
+    #save
+      font-size: 20px
+      padding: 10px 20px
+      width: 220px
+      margin-top: 40px
+    input
+      font-size: 18px
+      line-height: 1.3em
+      +futura
+      &:focus
+        border-color: none
+        +box-shadow(0 0 2px lighten($teal, 10%))
+    .control-group
+      margin-bottom: 30px
+    .control-label
+      width: 110px
+      font-size: 20px
+    .controls
+      margin-left: 120px
+      .post
+        font-size: 18px
+        +abs-l(6px, 120px)
+    .btn-settings span:before
+      right: 10px
+    .btn-tw, .btn-fb
+      padding: 6px 12px
+
+#password-modal
+  background: white
+  width: 440px
+  margin: -220px 0 0 -220px
+  h2
+    margin-top: 0
+  .modal-body
+    width: 390px
+    margin: auto
+    .control-label
+      width: 160px
+    .controls 
+      margin-left: 170px
+
+#notifications-modal,
+#privacy-modal
+  background: white
+  .modal-body > label,
+  .modal-body > form > label
+    clear: both
+    float: left
+    margin-bottom: 20px
+    font-size: 16px
+  select
+    width: 102px
+  input[type=checkbox]
+    display: none
+    + label:hover    
+      cursor: pointer
+    + label:before
+      color: gray      
+    &:checked + label:before
+      color: $teal
+  .pull-right
+    label
+      display: inline
+  .bar 
+    background: #F1F1F1
+    padding: 4px 15px
+    font-size: 16px
+  .icomoon-envelope:before
+    font-size: 38px
+
+#privacy-modal
+  .modal-body
+    margin: auto
+    width: 480px
+    form label
+      margin-bottom: 30px
+      font-size: 16px
+
+#no_results
+  background: image_url('no_result.png') 0 120px no-repeat
+  +dim(600px, 500px)
+  display: block
+  text-align: center
+  margin: auto
+
+#follow 
+  min-height: 1000px
+  .well 
+    +gradient-vertical(#fff, darken(#fff, 2%))
+  .span10
+    width: 406px
+  button.btn-plan 
+    +abs-r(6px, 0)
+  ul.nav li 
+    a
+      +museo
+      font-size: 26px
+      padding: 20px
+      +transition(.2s all ease-in-out)
+      &:hover 
+        color: $teal 
+        background: none
+  .requests
+    .btn-follow
+      display: none
+
+.follow_view,
+.comment_view
+  overflow: auto
+  button.close 
+    +abs-r(0, 6px)
+  img 
+    +dim(76px, auto)
+    +box-shadow(0 0 3px gray)
+    border: 3px solid white   
+    float: left  
+  .header 
+    float: left   
+    h3, h4, h5
+      margin-top: 0
+
+#comments 
+  h2 
+    text-align: center
+  .icomoon-2cent:before
+    font-size: 40px
+  > hr
+    margin-top: 0
+
+#add_comment
+  .icomoon-camera
+    margin-top: 10px
+    &:before 
+      font-size: 60px
+
+#add_comment form 
+  margin: 10px 0 
+
+.comment_view
+  margin: 10px 0
+  padding-bottom: 10px
+  img 
+    +dim(100px, auto)
+  .comment_contents 
+    float: left   
+    .name,
+    .time 
+      display: inline
+    .time 
+      margin-left: 1em
+    h3, h4, h5
+      margin-top: 0
+
+#search-results 
+  h1, 
+  .search-header
+    display: inline
+  .search-header
+    +rel
+    font-size: 22px
+    padding: 0 5px 0
+    top: -4px
+    left: 10px
+  .results-wrap
+    margin-top: 10px
+    border: 1px solid $search-border
+    +border-radius(4px 0 4px 4px)
+  .results-list,
+  .results-category
+    list-style: none
+    margin-top: 10px
+  .results-list 
+    margin: auto
+    width: 560px
+    hr 
+      margin: 0
+      border-top: 1px solid $search-border
+      border-bottom: 0
+      &:last-child 
+        border: 0
+    li.result 
+      padding: 20px 
+  .results-category
+    +border-radius(0 4px 4px 0)
+    +abs-r(0px, -2px)
+    width: 240px
+    border: 1px solid $search-border
+    border-left: 1px solid transparent
+    li 
+      padding: 13px 10px
+      font-size: 16px
+      border-bottom: 1px solid $search-border
+      border-left: 1px solid $search-border
+      background: $grayLighter
+      color: darken($nav_base, 50%)
+      cursor: pointer
+      +transition(.1s background ease-in-out)
+      &:hover 
+        background: $nav_base
+      &:first-child 
+        +border-radius(0 4px 0 0)
+      &:last-child
+        border-bottom: 0
+        +border-radius(0 0 4px 0)
+      &.active 
+        border-left: 1px solid white
+        background: white
+        color: $gray
+

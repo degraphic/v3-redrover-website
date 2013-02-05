@@ -1,0 +1,112 @@
+%h1.title Publisher Detail Page
+#publisher-detail
+  .row   
+    .span21
+      .row
+        .span5
+          =image_tag('amnh_logo.png', :class => "pub")
+        .publisher-info.span16
+          .row
+            .span14
+              %h2 DiMenna Children's History Museum. New-York Historical Society.       
+              %p="Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor."
+            .span2
+              %span.icomoon-share{"data-toggle" => "modal", :href => "#share-modal"}
+            .publisher-links.span16
+              %a{:href => '#'} website
+              %a{:href => '#'}
+                %span.icomoon-facebook
+              %a{:href => '#'}
+                %span.icomoon-twitter          
+            .publisher-follow.span16
+              %button.btn.btn-follow
+                %span.follow Follow
+                %span.following Following
+                %span.unfollow Unfollow
+
+      %hr.no-bottom/
+      %h2 Events from this Publisher
+      .row            
+        - 3.times do 
+          .span7
+            .detail_view
+              .image
+                .wrap
+                  = image_tag('journey_stars.jpg')
+              .header
+                %h3.title="Journey To The Stars, Three lines of fun in this exceedingly long title"
+                %hr.no-bottom/
+                .publisher-event-info
+                  %span.publisher="American Museum of Natural History"
+                  %span.date
+                    ="9/3"
+                    =" 10:00 am"
+        - 3.times do 
+          .span7
+            .detail_view
+              .image
+                .wrap
+                  = image_tag('journey_stars.jpg')
+              .header
+                %h3.title="Journey To The Stars"
+                %hr.no-bottom/
+                .publisher-event-info
+                  %span.publisher="American Museum of Natural History"
+                  %span.date
+                    ="9/3"
+                    =" 10:00 am"
+
+
+  %pre.prettyprint.linenums
+    = preserve do
+      :escaped
+        #publisher-detail
+          .row   
+            .span15
+              .row
+                .span5
+                  %img.pub{:src => "/images/nypl.jpg"}
+                .info.span10
+                  %h1 New York Public Library
+                  %p.follow
+                    %span.icomoon-star
+                    ="Followed by 15 including Kathryn T. & 13 others..."
+                  .share
+                    %button.btn.btn-icomoon.followed
+                      %span.icomoon-envelope
+                      Saved
+                    %button.btn.btn-icomoon    
+                      %span.icomoon-star 
+                      Follow  
+                  %p="Lorem sheezy"
+              %hr/
+              %h2 Photos:
+              .row            
+                .span5
+                  .detail_view
+                    .inner
+                      .image
+                        .wrap
+                          = image_tag('child.jpg')
+                      .header
+                        %h5.taken
+                          ="Taken by:"
+                          %span="Kathryn T."
+                        %h4.title="Amazing World of Animals"
+                        %h5.title="November 21st, 2012"
+                        %h5.location="New York, NY"
+            #more-events.span6
+              .well
+                %h4 More Events from NYPL
+                .span5
+                  .detail_view
+                    .image
+                      .wrap
+                        = image_tag('child.jpg')
+                    .header
+                      %h5.taken="New York Public Library"
+                      %h4.title="Amazing World of Animals"
+                      %h5.date
+                        ="Tues Sept 3rd"
+                        %span.pull-right="10:00 am"
+              .more &#x25BC;

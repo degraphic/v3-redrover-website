@@ -1,0 +1,39 @@
+%ul.features_nav
+  =hb '#view view.NavLinkView item="featured"'
+  %a.featured{:_action => 'goToFeaturedEvents href=true'}
+  =hb '/view'
+
+  =hb '#view view.NavLinkView item="myRedrover"'
+  %a#nav_my_redrover.my_redrover{:_action => 'goToMyRedrover href=true'}
+  / .btn-group
+  /   %a.my_redrover.dropdown-toggle{"data-toggle" => "dropdown"} 
+  /     My RedRover
+  /     %span.caret
+  /   %ul.dropdown-menu
+  /     %li
+  /       %a{:href => '/my_redrover'} My Profile
+  /     %li
+  /       %a{:href => '/my_redrover/places'} My Saved Places
+  /     %li
+  /       %a{:href => '/my_redrover/events'} My Saved Events
+  /     %li
+  /       %a{:href => '/my_redrover/best_day_ever'} My Best Day Ever Wizard
+  =hb '/view'
+  
+  =hb '#view view.NavLinkView item="browsePublishers"'
+  %a.fun{:_action => 'goToPublishers href=true'}
+  =hb "/view"
+
+  %li  
+    %a.doing{:href => '/doing'} 
+
+  =hb '#view view.NavLinkView item="browseEvents" btnGroup=true'
+  %a.browse.dropdown-toggle{"data-toggle" => "dropdown"}
+    %span.caret
+  %ul.dropdown-menu
+    %li
+      %a{_action: 'goToBrowseEvents href=true'} Events
+    %li
+      %a{_action: 'goToBrowsePlaces href=true'} Places
+  =hb "/view"
+  

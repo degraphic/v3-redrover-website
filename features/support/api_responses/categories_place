@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "categories": [
+      {
+        "id":646,
+        "name":"Parks & Beaches",
+        "category_type":"Place",
+        "icon":"http://s3.amazonaws.com/rr-staging-api/categories/mobile_app/646/parks_beaches_300x300.png?1354374720",
+        "icon_normal":"http://s3.amazonaws.com/rr-staging-api/categories/medium/646/parks_beaches_300x300.png?1354374720"
+      }
+    ]
+  }
+}

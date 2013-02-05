@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "categories": [{
+      "id": 1,
+      "name": "Drop-in Classes",
+      "category_type": "Event",
+      "icon": "http://localhost:9090/category_icon.png",
+      "icon_normal": "http://localhost:9090/category_icon.png"
+    }, {
+      "id": 2,
+      "name": "Exhibits",
+      "category_type": "Event",
+      "icon": "http://localhost:9090/category_icon.png",
+      "icon_normal": "http://localhost:9090/category_icon.png"
+    }]
+  }
+}

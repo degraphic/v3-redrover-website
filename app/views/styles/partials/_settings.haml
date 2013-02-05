@@ -1,0 +1,352 @@
+%h1.title Settings Page
+#settings
+  %h1 Settings
+  %hr/
+  .row
+    .span10
+      %h2 Profile
+      %form.form-horizontal
+        .control-group
+          %label.control-label Name:
+          .controls
+            %input{:placeholder => "First Name", :type => "text"}
+        .control-group
+          .controls    
+            %input{:placeholder => "Last Name", :type => "text"} 
+        .control-group
+          %label.control-label Password:
+          .controls
+            %a.btn.btn-settings{"data-toggle" => "modal", :href => "#password-modal", :role => "button"} Change Password                      
+        .control-group
+          %label.control-label Notifications:
+          .controls
+            %a.btn.btn-settings{"data-toggle" => "modal", :href => "#notifications-modal", :role => "button"} Notifications         
+        .control-group
+          %label.control-label Privacy:
+          .controls
+            %a.btn.btn-settings{"data-toggle" => "modal", :href => "#privacy-modal", :role => "button"} Privacy
+        .control-group
+          %label.control-label{:for => "inputLocation"} Location:
+          .controls
+            %input#inputLocation{:placeholder => "Zip Code", :type => "text"}        
+        .control-group
+          %label.control-label{:for => "inputEmail"} Email:
+          .controls
+            %input#inputEmail{:placeholder => "Email", :type => "text"}        
+        .control-group
+          %label.control-label{:for => "inputEmail"} Gender:
+          .controls
+            .toggle-button.gender
+              %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+    .span11
+      %h2 Social Networks
+      %form.form-horizontal
+        .control-group
+          %label.control-label Facebook:
+          .controls
+            / %a.btn.btn-settings Disconnect
+            %a.btn.btn-settings.btn-fb
+              %span.icomoon-facebook Connect           
+        .control-group          
+          .controls.rel
+            %label.post Post Activity to Facebook
+            .toggle-button.normal
+              %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}  
+        %hr/      
+        .control-group
+          %label.control-label Twitter:
+          .controls
+            / %a.btn.btn-settings Disconnect
+            %a.btn.btn-settings.btn-tw
+              %span.icomoon-twitter Connect          
+        .control-group          
+          .controls.rel
+            %label.post Post Activity to Twitter
+            .toggle-button.normal
+              %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+            
+        %hr/
+        .controls
+          %button#save.btn.btn-primary{:type => 'submit'} Save Settings
+
+  // modals
+  #password-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "password-modal", :role => "dialog", :tabindex => "-1"}
+    .modal-body   
+      %h2 Change Password
+      %form.form-horizontal
+        .control-group
+          %label.control-label Current Password:
+          .controls
+            %input{:type => "text"}            
+        .control-group
+          %label.control-label New Password:
+          .controls
+            %input{:type => "text"}            
+        .control-group
+          %label.control-label Confirm Password:
+          .controls
+            %input{:type => "text"}
+        %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Update         
+
+  #notifications-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "notifications-modal", :role => "dialog", :tabindex => "-1"}
+    .modal-header
+      %h2 Notifications
+    .bar Saved Events & Places
+    .modal-body             
+      %form
+        %label Reminders for My Saved Events   
+        .pull-right        
+          %input{:value => "valuable", :type => "checkbox", :name => "mobile1", :id => "mobile1"}
+          %label.icomoon-mobile{:for => "mobile1"}                
+          %input{:value => "valuable", :type => "checkbox", :name => "email1", :id => "email1"}   
+          %label.icomoon-envelope{:for => "email1"}                 
+        %label Add Saved Events to My Calendar   
+        .pull-right        
+          .toggle-button.normal
+            %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+        %label Select Calendar          
+        .pull-right        
+          %select
+            %option iCal
+            %option Google
+            %option Yahoo
+            %option Outlook
+    .bar 2&cent; Activity
+    .modal-body 
+      %label New Comment on Saved Event  
+      .pull-right        
+        %input{:value => "valuable", :type => "checkbox", :name => "mobile2", :id => "mobile2"}
+        %label.icomoon-mobile{:for => "mobile2"}                
+        %input{:value => "valuable", :type => "checkbox", :name => "email2", :id => "email2"}   
+        %label.icomoon-envelope{:for => "email2"}             
+    .bar Friends
+    .modal-body 
+      %label New Comment on Saved Event  
+      .pull-right        
+        %input{:value => "valuable", :type => "checkbox", :name => "mobile3", :id => "mobile3"}
+        %label.icomoon-mobile{:for => "mobile3"}                
+        %input{:value => "valuable", :type => "checkbox", :name => "email3", :id => "email3"}   
+        %label.icomoon-envelope{:for => "email3"}            
+      %label Add Saved Events to My Calendar 
+      .pull-right        
+        %input{:value => "valuable", :type => "checkbox", :name => "mobile4", :id => "mobile4"}
+        %label.icomoon-mobile{:for => "mobile4"}                
+        %input{:value => "valuable", :type => "checkbox", :name => "email4", :id => "email4"}   
+        %label.icomoon-envelope{:for => "email4"}                  
+    .modal-body
+      %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Done   
+
+  #privacy-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "privacy-modal", :role => "dialog", :tabindex => "-1"}
+    .modal-body
+      %h2 Privacy
+      %form
+        %label Publishers I Follow         
+        .pull-right        
+          %select
+            %option Public
+            %option Approve Followers
+            %option Private            
+        %label People I Follow         
+        .pull-right        
+          %select
+            %option Public
+            %option Approve Followers
+            %option Private            
+        %label My Followers
+        .pull-right        
+          %select
+            %option Public
+            %option Approve Followers
+            %option Private            
+        %label My Saved Events
+        .pull-right        
+          %select
+            %option Public
+            %option Approve Followers
+            %option Private            
+        %label My Saved Places
+        .pull-right        
+          %select
+            %option Public
+            %option Approve Followers
+            %option Private          
+    .modal-body
+      %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Done 
+
+.span24      
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped
+      #settings.span24
+        %h1 Settings
+        %hr/
+        .row
+          .span10            
+            %h2 Profile
+            %form.form-horizontal
+              .control-group
+                %label.control-label Name:
+                .controls
+                  %input{:placeholder => "First Name", :type => "text"}
+              .control-group
+                .controls    
+                  %input{:placeholder => "Last Name", :type => "text"} 
+              .control-group
+                %label.control-label Password:
+                .controls
+                  %a.btn.btn-settings{"data-toggle" => "modal", :href => "#password-modal", :role => "button"} Change Password                      
+              .control-group
+                %label.control-label Notifications:
+                .controls
+                  %a.btn.btn-settings{"data-toggle" => "modal", :href => "#notifications-modal", :role => "button"} Notifications         
+              .control-group
+                %label.control-label Privacy:
+                .controls
+                  %a.btn.btn-settings{"data-toggle" => "modal", :href => "#privacy-modal", :role => "button"} Privacy
+              .control-group
+                %label.control-label{:for => "inputLocation"} Location:
+                .controls
+                  %input#inputLocation{:placeholder => "Zip Code", :type => "text"}        
+              .control-group
+                %label.control-label{:for => "inputEmail"} Email:
+                .controls
+                  %input#inputEmail{:placeholder => "Email", :type => "text"}        
+              .control-group
+                %label.control-label{:for => "inputEmail"} Gender:
+                .controls
+                  .toggle-button.gender
+                    %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+          .span10.offset2 
+            %h2 Social Networks
+            %form.form-horizontal.social
+              .control-group
+                %label.control-label Facebook:
+                .controls
+                  / %a.btn.btn-settings Disconnect
+                  %a.btn.btn-settings.btn-fb
+                    %span.icomoon-facebook Connect           
+              .control-group          
+                .controls.rel
+                  %label.post Post Activity to Facebook
+                  .toggle-button.normal
+                    %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}  
+              %hr/      
+              .control-group
+                %label.control-label Twitter:
+                .controls
+                  / %a.btn.btn-settings Disconnect
+                  %a.btn.btn-settings.btn-tw
+                    %span.icomoon-twitter Connect          
+              .control-group          
+                .controls.rel
+                  %label.post Post Activity to Twitter
+                  .toggle-button.normal
+                    %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+                  
+              %hr/
+              .controls
+                %button#save.btn.btn-primary{:type => 'submit'} Save Settings
+
+        // modals
+        #password-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "password-modal", :role => "dialog", :tabindex => "-1"}
+          .modal-body   
+            %h2 Change Password
+            %form.form-horizontal
+              .control-group
+                %label.control-label Current Password:
+                .controls
+                  %input{:type => "text"}            
+              .control-group
+                %label.control-label New Password:
+                .controls
+                  %input{:type => "text"}            
+              .control-group
+                %label.control-label Confirm Password:
+                .controls
+                  %input{:type => "text"}
+              %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Update         
+
+        #notifications-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "notifications-modal", :role => "dialog", :tabindex => "-1"}
+          .modal-header
+            %h2 Notifications
+          .bar Saved Events & Places
+          .modal-body             
+            %form
+              %label Reminders for My Saved Events   
+              .pull-right        
+                %input{:value => "valuable", :type => "checkbox", :name => "mobile1", :id => "mobile1"}
+                %label.icomoon-mobile{:for => "mobile1"}                
+                %input{:value => "valuable", :type => "checkbox", :name => "email1", :id => "email1"}   
+                %label.icomoon-envelope{:for => "email1"}                 
+              %label Add Saved Events to My Calendar   
+              .pull-right        
+                .toggle-button.normal
+                  %input#checkbox1{:checked => "checked", :type => "checkbox", :value => "value1"}
+              %label Select Calendar          
+              .pull-right        
+                %select
+                  %option iCal
+                  %option Google
+                  %option Yahoo
+                  %option Outlook
+          .bar 2&cent; Activity
+          .modal-body 
+            %label New Comment on Saved Event  
+            .pull-right        
+              %input{:value => "valuable", :type => "checkbox", :name => "mobile2", :id => "mobile2"}
+              %label.icomoon-mobile{:for => "mobile2"}                
+              %input{:value => "valuable", :type => "checkbox", :name => "email2", :id => "email2"}   
+              %label.icomoon-envelope{:for => "email2"}             
+          .bar Friends
+          .modal-body 
+            %label New Comment on Saved Event  
+            .pull-right        
+              %input{:value => "valuable", :type => "checkbox", :name => "mobile3", :id => "mobile3"}
+              %label.icomoon-mobile{:for => "mobile3"}                
+              %input{:value => "valuable", :type => "checkbox", :name => "email3", :id => "email3"}   
+              %label.icomoon-envelope{:for => "email3"}            
+            %label Add Saved Events to My Calendar 
+            .pull-right        
+              %input{:value => "valuable", :type => "checkbox", :name => "mobile4", :id => "mobile4"}
+              %label.icomoon-mobile{:for => "mobile4"}                
+              %input{:value => "valuable", :type => "checkbox", :name => "email4", :id => "email4"}   
+              %label.icomoon-envelope{:for => "email4"}                  
+          .modal-body
+            %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Done   
+
+        #privacy-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "privacy-modal", :role => "dialog", :tabindex => "-1"}
+          .modal-body
+            %h2 Privacy
+            %form
+              %label Publishers I Follow         
+              .pull-right        
+                %select
+                  %option Public
+                  %option Approve Followers
+                  %option Private            
+              %label People I Follow         
+              .pull-right        
+                %select
+                  %option Public
+                  %option Approve Followers
+                  %option Private            
+              %label My Followers
+              .pull-right        
+                %select
+                  %option Public
+                  %option Approve Followers
+                  %option Private            
+              %label My Saved Events
+              .pull-right        
+                %select
+                  %option Public
+                  %option Approve Followers
+                  %option Private            
+              %label My Saved Places
+              .pull-right        
+                %select
+                  %option Public
+                  %option Approve Followers
+                  %option Private          
+          .modal-body
+            %button.btn.btn-primary.btn-set-modal.pull-right{:type => "submit"} Done 

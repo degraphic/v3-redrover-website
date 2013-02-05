@@ -1,0 +1,201 @@
+.modal
+  background: #F2F2F2
+  &:focus
+    border-color: none
+    outline: none
+
+.filter-controls
+  min-height: 60px
+  .ui-datepicker-trigger
+    width: 1px
+  .btn-toolbar
+    margin: 0
+  input.location 
+    +border-radius(6px)
+    width: 20%
+    +transition(.3s all ease-in-out)
+    &:focus
+      border-color: none
+      +box-shadow(0 0 2px rgba(54,143,165,.4))
+      border-color: rgba(54,143,165,.4)
+      width: 40%
+  .top_controls .dropdown-menu
+    left: auto
+    right: 0
+  .bottom_controls
+    form label.checkbox
+      width: 200px
+  p, h3, h4
+    color: $grayLight  
+  .within
+    margin: auto
+    +rel
+    p
+      +abs-l(-22px, 52px)
+      font-size: 22px
+  #miles
+    float: right  
+    button
+      padding: 10px 
+    .caret  
+      border-top: 4px solid $teal
+  .additional
+    float: right
+    margin-top: 6px 
+    &:hover   
+      cursor: pointer
+    .caret
+      margin-top: 7px      
+      &.down
+        border-top: 4px solid $grayLight
+      &.up
+        border-bottom: 4px solid $grayLight
+        border-top: none
+  form.starred 
+    margin: 10px 0 0
+
+.event
+  height: 410px
+  margin-bottom: 15px
+  overflow: hidden
+  +rel
+  +box-shadow(0 0 4px gray) 
+  .image
+    overflow: hidden  
+    position: relative
+    .wrap
+      position: absolute
+      width: 1000px            
+  &.large
+    .info
+      width: 530px
+    .image        
+      height: 410px
+      img
+        width: 550px
+    .icons
+      padding: 10px 0
+      bottom: 0   
+  &.small
+    .info
+      width: 246px
+    .image        
+      +dim(266px, 280px)
+      img
+        height: 280px
+    .icons
+      bottom: 10px
+    .header
+      width: 176px
+  .featured-tag
+    background: #E51600
+    text-transform: uppercase
+    padding: 4px 10px
+    color: white
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4)
+    +abs-l(20px, 0)
+  .info
+    text-shadow: 0 1px 0 rgba(255,255,255,.6)  
+    +transition(.3s all ease-in-out)    
+    position: absolute  
+    display: block
+    padding: 10px
+    background: rgba(255,255,255,.8)
+    top: 280px
+    height: 230px
+    &:hover
+      top: 165px   
+    .top
+      min-height: 85px
+    img, 
+    .header
+      float: left
+    img
+      +dim(60px, 60px)
+    .header
+      padding-left: 10px
+      .title
+        height: 1.1em
+        overflow: hidden
+      .place
+        text-transform: uppercase
+        font-size: 12px
+        line-height: 1.2
+    .bar
+      background: #F1F1F1
+      width: 100%
+      clear: both
+      padding: 10px
+      margin: 0 0 0 -10px
+      min-height: 20px
+      span
+        float: right        
+    .description
+      font-family: helvetica neue
+      font-size: 12px
+      line-height: 1.2
+      margin: 10px 0
+      overflow: hidden
+      height: 5.8em
+    .icons
+      position: absolute
+      left: 6px        
+      +dim(100%, 20px)
+      .icomoon-star:before,
+      .icomoon-envelope:before
+        color: white
+        text-shadow: 0 0 2px gray                     
+      .icomoon-star:before
+        font-size: 34px
+    
+.detail_view
+  padding: 0
+  border: 0
+  height: 400px
+  overflow: hidden
+  border: 1px solid rgba(153,153,153,.3)
+  .inner 
+    padding: 10px
+  .image 
+    +bs 
+    +dim(100%, 176px)
+    overflow: hidden  
+    position: relative
+    .wrap
+      position: absolute
+      +dim(246px, 176px) 
+  img
+    +dim(100%, auto)
+    display: block
+    +bs
+  p
+    color: $teal
+  .follow 
+    text-align: right
+  .header
+    h1, h2, h3, h4, h5, h6
+      margin: .3em 0 
+    .date, .location, .taken 
+      color: $grayLight
+    .taken span 
+      color: $gray
+
+li.result 
+  overflow: auto
+  padding: 10px
+  img 
+    +dim(50px, 50px)  
+    border: 1px solid $search-border
+    float: left 
+  .info 
+    float: left  
+    margin: -2px 0 0 10px
+    .title 
+      color: darken($nav_base, 50%)
+    .place 
+      font-size: 15px
+    h4, h5, h6 
+      margin: 0    
+  &:hover 
+    background: $nav_base
+    cursor: pointer

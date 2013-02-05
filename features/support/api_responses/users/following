@@ -1,0 +1,8 @@
+{
+  "status":"success",
+  "code":"API_SUCCESS",
+  "message":"The operation was successful",
+  "data":{
+    "users":[]
+  }
+}

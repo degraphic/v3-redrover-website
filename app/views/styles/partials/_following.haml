@@ -1,0 +1,60 @@
+
+%h1.title Following Page
+
+#follow.rel
+  %button.btn.btn-plan Find & Invite Friends
+  %ul.nav.nav-tabs
+    %li.active
+      %a{"data-toggle" => "tab", :href => "#following"}="498 Following"
+    %li
+      %a{"data-toggle" => "tab", :href => "#followers"}="200 Followers"
+  .tab-content
+    #following.tab-pane.fade.active.in  
+      .row.requests          
+        - 4.times do
+          .span10
+            .follow_view.well 
+              = image_tag('profile.jpg')
+              .header.span7
+                %h4.title="New York Public Library"
+                %h5.followers="24,025 Followers | 438 Following"       
+                %button.btn.btn-follow No Thanks
+                %button.btn.btn-follow.follow
+                  %span.follow="Follow"
+                  %span.following="Following"
+                  %span.unfollow="Unfollow"  
+                %button.btn.btn-accept.decline="Decline"
+                %button.btn.btn-accept.accept="Accept"
+
+      .row
+        - 8.times do
+          .span10
+            .follow_view.well
+              = image_tag('profile.jpg')
+              .header.span7
+                %h4.title="American Museum of Natural History"
+                %h5.followers="30,000 Followers | 500 Following"
+                %button.btn.btn-follow.following
+                  %span.follow="Follow"
+                  %span.following="Following"
+                  %span.unfollow="Unfollow"  
+                    
+
+    #followers.tab-pane.fade
+      .row
+        - 8.times do
+          .span10
+            .follow_view.well
+              = image_tag('profile.jpg')
+              .header.span7
+                %h4.title="American Museum of Natural History"
+                %h5.followers="30,000 Followers | 500 Following"
+                %button.btn.btn-follow
+                  %span.follow="Follow"
+                  %span.following="Following"
+                  %span.unfollow="Unfollow"  
+         
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped 
+

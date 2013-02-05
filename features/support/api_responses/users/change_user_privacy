@@ -1,0 +1,6 @@
+{
+  "status":"success",
+  "code":"API_SUCCESS",
+  "message":"The operation was successful",
+  "app_message":"New Privacy Settings were received"
+}

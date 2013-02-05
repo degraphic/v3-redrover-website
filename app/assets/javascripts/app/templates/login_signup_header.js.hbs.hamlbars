@@ -1,0 +1,53 @@
+%ul#login-menu.nav.pull-right
+  %li.divider-vertical
+  %li.flat
+    %a{:href => "#signup-modal", :role => "button", :_action => 'showSignUp target="parentView"'} Sign Up
+  %li.divider-vertical
+  %li.dropdown.flat
+    %a.login{:href => "#", :_action => 'toggleLogin target="parentView"'} Log In
+    %ul.dropdown-menu#dropdown-login
+      %li
+        .LP-login-form
+          %form
+            %p.text-error
+              =hb 'view.loginErrors'
+            %fieldset
+              =hb 'view Ember.TextField valueBinding="view.email" placeholder="Email" type="email" id="login_email"'
+              =hb 'view Ember.TextField valueBinding="view.password" placeholder="Password" type="password" id="login_password"'
+              %button.btn.btn-primary.pull-right{:type => "button", :_action => 'login target="parentView"'} Log In
+              %button.btn.btn-fb.btn-login.icomoon-facebook#btn-fb{ :_action => 'facebookLogin target="parentView"' }
+              %button.btn.btn-tw.btn-login.icomoon-twitter#btn-tw{ :_action => 'twitterLogin target="parentView"' }
+
+#signup-modal.modal.hide{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-body
+    %button.close{"data-dismiss" => "modal", :_action => 'closeSignUp target="parentView"'} ×
+    %h2 Sign Up to
+    = image_tag('header_logo.png')
+    .buttons
+      %button.btn.btn-signup.btn-fb.icomoon-facebook#btn-fb{ :_action => 'facebookLogin target="parentView"' }Connect with Facebook
+      %button.btn.btn-signup.btn-tw.icomoon-twitter#btn-tw{:_action => 'twitterLogin target="parentView"'}Connect with Twitter
+      %button.btn.btn-signup.btn-email.icomoon-envelope{:_action => 'showSignupForm target="parentView"'}Connect with Email
+    %p
+      Already a Member?
+      %a{:href => '#'} Sign In
+    .signup-form
+      %p.text-error
+        =hb 'view.signupErrors'
+      %form.form-horizontal
+        .control-group
+          =hb 'view Ember.TextField valueBinding="view.email" placeholder="Email" id="email"'
+        .control-group
+          =hb 'view Ember.TextField valueBinding="view.first_name" placeholder="First Name" type="text" id="first_name"'
+        .control-group
+          =hb 'view Ember.TextField valueBinding="view.last_name" placeholder="Last Name" type="text" id="last_name"'
+        .control-group
+          =hb 'view Ember.TextField valueBinding="view.password" placeholder="Password" type="password" id="password"'
+        .control-group
+          =hb 'view Ember.TextField valueBinding="view.password_confirmation" placeholder="Password Confirmation" type="password" id="password_confirmation"'
+        %button.btn.btn-primary.pull-right{:type => "button", :_action => 'signup target="parentView"'}Connect Now
+
+/ %li.dropdown
+/   %a.btn.btn-header{"data-toggle" => "dropdown", :href => "#"}  Sign Up
+/   %ul.dropdown-menu#login-menu
+/     %li
+/       .LP-registration-form

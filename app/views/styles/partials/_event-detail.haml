@@ -1,0 +1,219 @@
+:javascript 
+  $(function(){
+    $('span.icomoon-star').popover({
+      placement:'bottom',
+      html: true,
+      title: false
+    }); 
+
+    $('#add-to-calendar').live("click", function(){
+      if($(this).hasClass('open')){
+        $('.add-to-calendar').slideUp(200);
+        $('#save-calendar b.caret').addClass('up');
+        $(this).removeClass('open');
+      } else {
+        $('.add-to-calendar').slideDown(200);
+        $('#save-calendar b.caret').removeClass('up');
+        $(this).addClass('open');
+      }
+    });
+    
+    $('#share-modal .btn-group button').live("click", function(){
+
+      function hideBody(){
+        $('.share-body').fadeOut(200);
+      }
+
+      hideBody();
+
+      if ($(this).hasClass('icomoon-facebook')){
+        $('.share-facebook-body').fadeIn(200);
+      } 
+
+      else if ($(this).hasClass('icomoon-twitter')){
+        $('.share-twitter-body').fadeIn(200);
+      } 
+
+      else if ($(this).hasClass('share-email')){
+        $('.share-email-body').fadeIn(200);
+      } 
+
+    });
+
+    $('button.icomoon-plus').live("click", function(){
+      
+      if ($(this).hasClass('open')) {
+        
+        $('.add-recipients').slideUp(200);
+        $(this).removeClass('open');
+
+      } else {
+
+        $('.add-recipients').slideDown(200);
+        $(this).addClass('open');
+
+      }
+
+    });
+
+  });
+
+%h1.title Event Detail Page
+.row    
+  #event-detail.span21
+    .row  
+      .image.span21
+        .wrap
+          = image_tag('circus.jpg')
+      .span21.rel
+        = image_tag('new-victory.png', :class => 'publisher')
+        %span.icomoon-star{"data-content" => "<ul id='save-calendar'class='calendar'><li><a href='#'>Save On RedRover</a></li><li class='divider'></li><li id='add-to-calendar'><a>Add to Calendar Tool</a><b class='caret up'></b></li><div class='add-to-calendar'><li><a href='#' target='undefined' title='Google'><span>Google</span></a></li><li><a href='#' title='iCalendar'><span>iCalendar</span></a></li><li><a href='#' title='Outlook'><span>Outlook</span></a></li><li><a href='#' target='undefined' title='Yahoo'><span>Yahoo</span></a></li></div></ul>", "data-original-title" => "", :href => "#", :rel => "popover"}
+
+      .info.span15
+        .row
+          .header.span15
+            %h5.place='The New Victory Theater'
+            %a{:href => '#'}
+              %h2.title='Circus Oz - From the Ground Up Tour from Melbourne, Australia '
+            %h5.date
+              ='Saturday, Dec 8th, 10am - 6pm' 
+            %hr.no-bottom.no-top/ 
+          .span15
+            %p="Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor. Ma nizzle pellentesque nibh et fizzle. Shiznit izzle tortor. Pellentesque daahng dawg rhoncizzle pizzle. Pot hac pimpin' platea dictumst. Mammasay mammasa mamma oo sa dapibizzle. Pimpin' tellus urna, pretium bow wow wow, mattizzle mah nizzle, eleifend vitae, nunc. Crackalackin suscipizzle. Integizzle sempizzle its fo rizzle sizzle dope."
+            %h3.category
+              %span.icomoon-fair 
+                Category:
+                %span="Fairs"
+              %a.btn.purchase{:href => '#'} Purchase Tickets
+              %span.icomoon-share{"data-toggle" => "modal", :href => "#share-modal"}
+            %hr/
+            .bottom           
+              .row
+                .map-info.span6             
+                  %h5.address.rel
+                    %a{:href => '#'}
+                    ='The New Victory Theater'
+                    %br/
+                    ='209 West 42nd Street'
+                    ='New York, NY 10036'
+                    %br/
+                    ='5 mi'
+                    %span.icomoon-location                  
+                  %h5.rel.phone
+                    ='(555) 555-5555'
+                    %span.icomoon-phone
+                  %h5.donation
+                    ='Would you like to make a' 
+                    ='donation to this organization?'
+                    %a{:href => "#"} Click here
+
+                .map.span8
+                  %iframe{:frameborder => "0", :height => "100%", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?ie=UTF8&q=natural+history+museum+nyc&fb=1&gl=us&hq=natural+history+museum&hnear=0x89c24fa5d33f083b:0xc80b8f06e177fe62,New+York,+NY&cid=0,0,13371693796540398977&t=m&z=16&iwloc=A&output=embed&iwloc=near", :width => "100%"}
+
+            %hr/
+            .row
+              #comments.span15
+                %h2 
+                  Everyone's 2c
+                  %span.icomoon-2cent
+                %hr/
+                .row.requests          
+                  - 2.times do
+                    .span15
+                      .comment_view 
+                        = image_tag('profile.jpg')
+                        .comment_contents.span11
+                          %h4.name="Sally M."
+                          %h5.time="4 hours ago" 
+                          %p.comment="Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor."      
+                      %hr/
+                  #add_comment.span15
+                    .comment_view 
+                      = image_tag('profile.jpg')
+                      .comment_contents.span12
+                        %h4.name="Kathryn T."
+                        %form 
+                          %textarea.span12{:rows => "3", :placeholder => "Add your 2¢"}
+                          %span.icomoon-camera.pull-left
+                          .btn.btn-cents.pull-right
+                            %text add your    
+                            %i.icon-cents
+
+      #more-events.span6
+        .well
+          %h4 Nearby Before & After
+          %hr/
+          .more-events-scroll
+            - 6.times do 
+              .span5
+                .detail_view
+                  .detail-image
+                    = image_tag('baseball-kid.png')
+                  .header
+                    .sale="15% Off"
+                    .title="Modell's Sporting Goods"
+                    .detail-address
+                      ="234 West 42nd Street"
+                    .detail-date
+                      ="Saturday, Dec 8th"
+                      %br
+                      ="9am - 6pm"
+                %hr/
+              .span5
+                .detail_view
+                  .detail-image
+                    = image_tag('place-icons/library.png')
+                  .header
+                    .sale="15% Off"
+                    .title="Modell's Sporting Goods"
+                    .detail-address
+                      ="234 West 42nd Street"
+                    .detail-date
+                      ="Saturday, Dec 8th"
+                      %br
+                      ="9am - 6pm"
+                %hr/
+        .more &#x25BC;
+  
+
+#share-modal.modal{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3 Share an event
+  .btn-group{"data-toggle" => "buttons-radio"}
+    %button.btn.icomoon-facebook.active{:type => "button"} Facebook
+    %button.btn.icomoon-twitter{:type => "button"} Twitter
+    %button.btn.share-email{:type => "button"} Email
+  .modal-body
+    .share-body.share-facebook-body
+      %form
+        %textarea{:rows => "3", :placeholder => "Write a message"}
+        .row
+          .span3
+            = image_tag('new-victory.png', :class => 'share-facebook-image')
+          .span10
+            %h3 Circus Oz - From the Ground Up Tour from Melbourne, Australia
+            %p="Lurem ipsoom dulur seet emet, cunsectetoor edeepisicing ileet, sed du ieeoosmud tempur inceedidoont ut lebure-a it dulure-a megna eleeqooa. Ut ineem ed meenim feneeem, qooees nustrood ixerceeteshun ullemcu leburees neesi ut eleeqooip ix ia cummudu cunseqooet."
+        %button.btn.btn-share.pull-right{:type => "submit"} Share    
+    .share-body.share-twitter-body
+      %form
+        %textarea{:rows => "3", :placeholder => "Write a message"}
+        %button.btn.btn-share.pull-right{:type => "submit"} Share
+    .share-body.share-email-body
+      %form
+        %span.email-recipient To:
+        %input{:type => 'text'}
+        %button.btn.icomoon-plus
+        
+        .add-recipients 
+          %input.add-cc{:type => 'text'}
+          %input.add-bcc{:type => 'text'}
+
+        %textarea{:rows => "3", :placeholder => "Write a message"}
+        .row
+          .span3
+            = image_tag('new-victory.png', :class => 'share-facebook-image')
+          .span10
+            %h3 Circus Oz - From the Ground Up Tour from Melbourne, Australia
+            %p="Lurem ipsoom dulur seet emet, cunsectetoor edeepisicing ileet, sed du ieeoosmud tempur inceedidoont ut lebure-a it dulure-a megna eleeqooa. Ut ineem ed meenim feneeem, qooees nustrood ixerceeteshun ullemcu leburees neesi ut eleeqooip ix ia cummudu cunseqooet."
+        %button.btn.btn-share.pull-right{:type => "submit"} Share  

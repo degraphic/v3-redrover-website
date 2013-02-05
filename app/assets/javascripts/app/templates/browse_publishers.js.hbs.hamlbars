@@ -1,0 +1,19 @@
+#fun
+  %img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.visibility'} }
+
+  / .btn-toolbar
+  /   .btn-group.filter{'data-toggle' => 'buttons-radio'}
+  /     %button.btn.active View All
+  /     %button.btn Featured
+  /     %button.btn Most Popular
+  /     %button.btn Category 1
+  /     %button.btn Category 2
+  /     %button.btn Category 3
+  =hb '#each categorizedPublishers'
+
+  %div{:bind => {:class => 'category.name'} }
+    %h2=hb 'category.name'
+    =hb '#each publishers'
+    =hb 'view V3RedroverWebsite.BrowsePublisherRowView'
+    =hb '/each'
+  =hb '/each'

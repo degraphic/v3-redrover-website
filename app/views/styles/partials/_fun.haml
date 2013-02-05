@@ -1,0 +1,105 @@
+%h1.title Follow the Fun
+#fun
+  .btn-toolbar
+    .btn-group.filter{'data-toggle' => 'buttons-radio'}
+      %button.btn.active View All
+      %button.btn Featured
+      %button.btn Most Popular
+      %button.btn Category 1
+      %button.btn Category 2
+      %button.btn Category 3
+  .featured
+    %h2 Featured
+    .row     
+      - 4.times do 
+        .span5
+          .detail_view.well
+            .inner
+              = image_tag('moma.jpg')
+              %h4 
+                Museum of Modern Arts
+                %br
+                Long Title Goes Here
+              %p
+                %span.icomoon-star
+                (15) including Kathryn T. & 13 others...
+              .follow
+                %button.btn.btn-icomoon
+                  %span.icomoon-star
+                  Follow
+  .popular
+    %h2 Most Popular
+    .row    
+      - 4.times do   
+        .span5
+          .detail_view.well
+            .inner
+              = image_tag('moma.jpg')
+              %h4 
+                Museum of Modern Arts
+                %br
+                Long Title Goes Here
+              %p
+                %span.icomoon-star
+                (15) including Kathryn T. & 13 others...
+              .follow
+                %button.btn.btn-icomoon
+                  %span.icomoon-star
+                  Follow
+  .cat-1
+    %h2 Category 1
+    .row     
+      - 4.times do  
+        .span5
+          .detail_view.well
+            .inner
+              = image_tag('moma.jpg')
+              %h4 
+                Museum of Modern Arts
+                %br
+                Long Title Goes Here
+              %p
+                %span.icomoon-star
+                (15) including Kathryn T. & 13 others...
+              .follow
+                %button.btn.btn-icomoon
+                  %span.icomoon-star
+                  Follow     
+  .cat-2
+    %h2 Category 2
+    .row    
+      - 4.times do   
+        .span5
+          .detail_view.well
+            .inner
+              = image_tag('moma.jpg')
+              %h4 
+                Museum of Modern Arts
+                %br
+                Long Title Goes Here
+              %p
+                %span.icomoon-star
+                (15) including Kathryn T. & 13 others...
+              .follow
+                %button.btn.btn-icomoon
+                  %span.icomoon-star
+  .cat-3
+    %h2 Category 3
+    .row  
+      - 4.times do     
+        .span5
+          .detail_view.well
+            .inner
+              = image_tag('moma.jpg')
+              %h4 
+                Museum of Modern Arts
+                %br
+                Long Title Goes Here
+              %p
+                %span.icomoon-star
+                (15) including Kathryn T. & 13 others...
+              .follow
+                %button.btn.btn-icomoon
+                  %span.icomoon-star
+                  Follow
+    

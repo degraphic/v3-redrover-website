@@ -1,0 +1,79 @@
+.toggle-button
+  +futura
+  display: inline-block
+  cursor: pointer
+  -webkit-border-radius: 5px
+  +border-radius(5px)
+  border: 1px solid
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  position: relative
+  text-align: left
+  overflow: hidden
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  &.deactivate
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50)
+    opacity: 0.5
+    cursor: default !important
+    label, span
+      cursor: default !important
+  > div
+    display: inline-block
+    width: 150px
+    position: absolute
+    top: 0
+    &.disabled
+      left: -50%
+  input[type=checkbox]
+    display: none
+  span
+    cursor: pointer
+    position: relative
+    float: left
+    display: inline-block
+  label
+    cursor: pointer
+    position: relative
+    float: left
+    display: inline-block
+    background: #fefefe
+    margin-left: -4px
+    margin-right: -4px
+    border: 1px solid #E6E6E6
+    margin-top: -1px
+    z-index: 100
+    +gradient-vertical(#fefefe, #e6e6e6)
+  span
+    color: #fefefe
+    text-align: center
+    z-index: 1
+    &.labelLeft
+      +border-radius(4px 0 0 4px)
+      padding-left: 3px
+    &.labelRight
+      +border-radius(0 4px 4px 0)
+      color: black
+      +gradient-vertical(#e6e6e6, #fefefe)
+      padding-right: 3px
+    &.primary, &.labelLeft
+      color: #fefefe
+      +gradient-vertical(darken($teal, 10%), $teal)
+    &.info
+      color: #fefefe
+      +gradient-vertical(#2f96b4, #5bc0de)
+      background: #5bc0de
+    &.success
+      color: #fefefe
+      +gradient-vertical(#51a351, #62c462)
+    &.warning
+      color: #fefefe
+      +gradient-vertical(#f89406, #dbb450)
+    &.danger
+      color: #fefefe
+      +gradient-vertical(#bd362f, #ee5f5b)
+
+

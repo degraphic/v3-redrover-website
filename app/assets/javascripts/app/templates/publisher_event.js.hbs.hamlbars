@@ -1,0 +1,14 @@
+.span7
+  .detail_view
+    %a{:_action => 'goToEvent this href=true'}
+      .image
+        .wrap
+          %img{:bind => { :src => 'image_medium' } }
+      .header
+        %h3.title=hb 'title'
+        %hr.no-bottom
+        .publisher-event-info
+          %span.publisher=hb 'publisher.title'
+          %span.date
+            =hb 'formatDate start_date'
+            =hb 'formatTime start_time'

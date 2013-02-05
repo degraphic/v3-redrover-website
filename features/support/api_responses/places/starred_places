@@ -1,0 +1,37 @@
+{
+  "code": "API_SUCCESS", 
+  "data": {
+    "places": [
+      {
+        "age_range": null, 
+        "categories": [
+          {
+            "icon": "http://staging-api.redroverapp.com/categories/missing_mobile_app.png", 
+            "icon_normal": "http://staging-api.redroverapp.com/categories/missing_medium.png", 
+            "id": 641, 
+            "name": "Libraries"
+          }
+        ], 
+        "city": "Bronx", 
+        "clean_bathroom_indicator": null, 
+        "count_followers": 1, 
+        "description": null, 
+        "follower_users": [], 
+        "hours_of_operation": null, 
+        "id": 252, 
+        "image_medium": "http://staging-api.redroverapp.com/places/missing_medium.png", 
+        "image_thumb": "http://staging-api.redroverapp.com/places/missing_thumb.png", 
+        "lat_lon": "40.8186397845861,-73.8940113317315", 
+        "name": "Hunt's Point Library", 
+        "phone_number": "(718) 617-0338", 
+        "starred_by_current_user": true, 
+        "state": "NY", 
+        "street_address": "877 Southern Blvd", 
+        "website_url": null, 
+        "zipcode": null
+      }
+    ]
+  }, 
+  "message": "The operation was successful", 
+  "status": "success"
+}

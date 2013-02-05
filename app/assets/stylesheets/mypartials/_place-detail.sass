@@ -1,0 +1,96 @@
+#place-detail
+  +box-shadow(0 0 4px gray) 
+  +rel
+  .place-detail-bottom
+    padding-bottom: 20px
+  .map
+    height: 330px
+  .type
+    text-align: center
+    img 
+      margin-top: 10px
+    h3 
+      +museo
+      color: lighten($gray, 10%)
+      font-size: 20px
+  .place-info
+    h1, h2, h3, h4, h5, h6
+      margin-left: 24px
+    .icomoon-location,
+    .icomoon-phone  
+      +abs-l(2px, -28px)
+      &:before
+        color: red
+  .connect
+    margin-top: 30px
+    span
+      float: right
+      margin-right: 20px
+      &:before
+        vertical-align: middle
+        text-shadow: 0 -1px 1px rgba(black, .8)
+        color: lighten($grayLight, 25%)
+        text-shadow: 0 -1px 1px rgba(black, .6)
+    span.active:before 
+      color: red
+    .icomoon-star:before
+      font-size: 80px
+    .icomoon-share:before
+      font-size: 60px
+
+#place-events
+  .publisher-view 
+    text-align: right
+    cursor: pointer
+    .caret 
+      margin-top: 10px
+      +transition(.1s all ease-in-out)
+  > .row 
+    margin-bottom: 30px
+  h2
+    margin-bottom: 0
+  hr 
+    margin-top: 0
+  .place-publisher
+    img 
+      +bs 
+      width: 100%
+    .btn-follow
+      width: 100%
+      margin-top: 10px
+  .place-publisher-events
+    .arrow span
+      &:before 
+        +rel 
+        top: 80px
+        color: $grayLight
+    .arrow span:hover 
+      cursor: pointer
+      &:before
+        color: $gray 
+    .span5 
+      +transition(.2s all ease-in-out)
+  .event-carousel
+    overflow: hidden 
+    height: 188px
+  .detail_view 
+    +rel
+    margin: 0
+    min-height: 0
+    height: 186px
+    img 
+      height: 100%
+    .header 
+      +box-sizing(border-box)
+      padding: 0 10px 
+      width: 100%
+      position: absolute 
+      bottom: 0
+      background: rgba(white, .8)
+      hr 
+        margin: .1em 0
+    .title 
+      min-height: 36px
+    .date 
+      text-align: right
+      color: $font_light

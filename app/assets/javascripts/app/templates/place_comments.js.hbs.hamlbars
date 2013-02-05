@@ -1,0 +1,18 @@
+%h2 
+  Everyone's 2c
+  %span.icomoon-2cent
+.row.requests
+  =hb "each comments" do
+    =hb "view V3RedroverWebsite.PlaceCommentView"
+
+  #add_comment.span21
+    .comment_view 
+      %img{bind: {src: "V3RedroverWebsite.currentUser.profile_picture_thumb"} }
+      .comment_contents.span12
+        %h4.name=hb "V3RedroverWebsite.currentUser.full_name"
+        %form 
+          %textarea#commentContent.span12{:rows => "3", :placeholder => "Add your 2¢"}
+          / %span.icomoon-camera.pull-left
+          .btn.btn-cents.pull-right#addPlaceComment{_action: 'addComment on="click" target="view"'}
+            %text add your    
+            %i.icon-cents

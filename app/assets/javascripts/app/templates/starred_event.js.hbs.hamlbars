@@ -1,0 +1,13 @@
+.detail_view.well
+  %a{:_action => 'goToEvent this href=true'}
+    .inner
+      .wrap
+        .image
+          .wrap
+            %img{:bind => {:src => 'image_thumb'}}
+      .header
+        %h5.place= hb 'place.name'
+        %h3.title= hb 'title'
+        %h5.date
+          = hb 'formatDate start_date'
+          = hb 'formatTime start_time'

@@ -1,0 +1,23 @@
+.event.small.span7
+  .image
+    .wrap
+      %img{:bind => { :src => :image_medium }}
+  %a{:_action => 'goToEvent this href=true'}
+    .info
+      .top
+        %img{:bind => { :src => 'publisher.image_thumb' }}
+        .header
+          .place=hb 'place.name'
+          %h4.title=hb 'title'
+          / %h6.branch East Village Branch
+      .bar
+        =hb 'formatDate start_date'
+        %span &nbsp;
+        %span=hb 'formatTime start_time'
+      .description=hb 'description'
+      .icons
+        %a{:href => '#'}
+          %span.icomoon-envelope Share
+        %a#save{:href => '#'}
+          %span.icomoon-star{:_action => 'star_model this target="parentView"', :bind => { :class => 'view.starredClass'}}
+            =hb 'view.starredLabelDefault'

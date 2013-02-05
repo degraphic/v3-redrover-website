@@ -1,0 +1,70 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "event": {
+      "id": "68529",
+      "title": "VIP Health Care",
+      "description": " Room rental - Staff training session ",
+      "start_date": "2012-11-07",
+      "start_time": "09:30:00",
+      "end_date": null,
+      "end_time": "",
+      "minimum_age": null,
+      "maximum_age": null,
+      "cost": null,
+      "frequency_type": null,
+      "phone_number": "(212) 275-6975",
+      "event_url": "http://www.nypl.org/node/185120",
+      "ticketing_url": null,
+      "redrover_details_url": "http://localhost:3000/events/1",
+      "comments": [1,2,3,4],
+      "ticketing_url": "https://boxoffice.mcny.org/public/show.asp",
+      "categories": [{
+          "id":31,
+          "icon": "http://s3.amazonaws.com/rr-staging-api/categories/mobile_app/31/details_lg_icon_theater.png?1343247970",
+          "icon_normal": "http://s3.amazonaws.com/rr-staging-api/categories/medium/31/details_lg_icon_theater.png?1343247970",
+          "name": "Games"
+        }
+      ],
+      "publisher": {
+        "id": 1,
+        "title": "New York Public Library",
+        "image_thumb": "http://localhost:9090/NYPL_logo.jpg",
+        "image_medium": "http://localhost:9090/NYPL_logo.jpg",
+        "primary_place": null,
+        "deactivated": false
+        },
+        "image_thumb": "http://localhost:9090/missing_thumb.png",
+        "image_medium": "http://localhost:9090/missing_medium.png",
+        "follower_users": [{
+          "id": 46,
+          "full_name": "Wei Zhang",
+          "profile_picture_thumb": "http://localhost:9090/profile_picture.png",
+          "gender": "M"
+          }],
+          "count_followers": 1,
+          "place": {
+            "id": 247,
+            "name": "Melrose Library",
+            "website_url": "http://foursquare.com/venue/13311353",
+            "age_range": null,
+            "hours_of_operation": null,
+            "phone_number": null,
+            "description": null,
+            "clean_bathroom_indicator": null,
+            "image_thumb": "http://localhost:9090/library.png",
+            "image_medium": "http://localhost:9090/library.png",
+            "street_address": "910 Morris Avenue",
+            "city": "Bronx",
+            "state": "NY",
+            "zipcode": "10451",
+            "lat_lon": "40.8263037833333,-73.91749",
+            "follower_users": [],
+            "count_followers": 0,
+            "categories": []
+          }
+        }
+      }
+    }

@@ -1,0 +1,100 @@
+%h1.title Buttons
+.well
+  .row
+    .span6
+      %h3 Primary Buttons
+      .btn-toolbar
+        .btn.btn-primary Primary
+        .btn.btn-primary.btn-small Primary
+        .btn.btn-primary.btn-mini Primary
+    .span6
+      %h3 Primary Buttons Disabled
+      .btn-toolbar  
+        .btn.btn-primary.disabled Primary
+        .btn.btn-primary.btn-small.disabled Primary
+        .btn.btn-primary.btn-mini.disabled Primary  
+    .span
+      %h3 Dropdown Buttons
+      .btn-toolbar
+        .btn-group
+          %button.btn.btn-primary Dropdown
+          %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown"}
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Action
+            %li
+              %a{:href => "#"} Another action
+            %li.divider
+            %li
+              %a{:href => "#"} Separated link
+    .span24
+      %h3 Custom Buttons
+      .btn-toolbar
+        .btn.btn-plan Make a plan here
+        .btn.btn-plan
+          %i.icon-plan
+          %text Make a plan here
+        .btn.btn-cents 
+          %text add your    
+          %i.icon-cents
+        .btn.btn-filter Filter
+    .span12  
+      %h3 Styled Buttons
+      .buttons
+        %button.btn.btn-signup.btn-fb.icomoon-facebook Connect with Facebook
+        %button.btn.btn-signup.btn-tw.icomoon-twitter Connect with Twitter
+        %button.btn.btn-signup.btn-email.icomoon-envelope Connect with Email
+      .buttons 
+        %button.btn.btn-tw.btn-login.icomoon-twitter
+        %button.btn.btn-fb.btn-login.icomoon-facebook
+    
+    
+.span24      
+%pre.prettyprint.linenums
+  = preserve do
+    :escaped
+      %h3 Primary Buttons
+      .btn-toolbar
+        .btn.btn-primary Primary
+        .btn.btn-primary.btn-small Primary
+        .btn.btn-primary.btn-mini Primary
+      %h3 Primary Buttons Disabled
+      .btn-toolbar  
+        .btn.btn-primary.disabled Primary
+        .btn.btn-primary.btn-small.disabled Primary
+        .btn.btn-primary.btn-mini.disabled Primary  
+      %h3 Dropdown Buttons
+      .btn-toolbar
+        .btn-group
+          %button.btn.btn-primary Dropdown
+          %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown"}
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Action
+            %li
+              %a{:href => "#"} Another action
+            %li.divider
+            %li
+              %a{:href => "#"} Separated link
+      %h3 Custom Buttons
+      .btn-toolbar
+        .btn.btn-plan Make a plan here
+        .btn.btn-plan
+          %i.icon-plan
+          %text Make a plan here
+        .btn.btn-cents 
+          %text Share your    
+          %i.icon-cents
+        .btn.btn-filter Filter
+
+      %h3 Styled Buttons
+      .buttons
+        %button.btn.btn-signup.btn-fb.icomoon-facebook Connect with Facebook
+        %button.btn.btn-signup.btn-tw.icomoon-twitter Connect with Twitter
+        %button.btn.btn-signup.btn-email.icomoon-envelope Connect with Email
+      .buttons 
+        %button.btn.btn-tw.btn-login.icomoon-twitter
+        %button.btn.btn-fb.btn-login.icomoon-facebook
+

@@ -1,0 +1,8 @@
+development:
+  app_id:     EjI0EUbs0fnoMLjD2UaYSA
+
+test:
+  app_id:     EjI0EUbs0fnoMLjD2UaYSA
+
+production:
+  app_id:     <%= ENV['TWITTER_APP_ID'] %>

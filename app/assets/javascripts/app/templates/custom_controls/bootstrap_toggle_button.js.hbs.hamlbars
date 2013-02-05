@@ -1,0 +1,1 @@
+=hb 'view Ember.Checkbox checkedBinding="view.checked" valueBinding="view.value"'

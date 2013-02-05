@@ -1,0 +1,80 @@
+#place-detail
+  .info
+    .row
+      .map.span21
+    .place-detail-bottom.row
+      .type.span4
+        %img{:bind => { :src => 'image_thumb' } }
+        =hb 'if categories' do
+          %h3=hb 'categories.0.name'
+      .span10.rel      
+        .header
+          %h2.title=hb 'name'
+        .place-info               
+          %h3.rel
+            =hb "street_address"
+            %br/
+            =hb "city"
+            ,
+            =hb 'state'
+            %span.icomoon-location             
+          %h5.rel
+            = hb 'if phone_number' do
+              =hb 'phone_number'
+            %span.icomoon-phone
+      .span7.connect
+        %span.icomoon-share
+        =hb "if V3RedroverWebsite.currentUser.isLoggedIn" do
+          %a#start.pull-right{:_action=>'star_model on="click" target="view"', href:"#"}
+            %span{bind: { :class=>'view.starredClass'} }
+
+        /   %img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.visibility'} }
+        /   %button.btn.btn-icomoon.saved#save{:_action => 'star_model target="parentView"'}
+        /     %span.icomoon-star
+        /     =hb 'view.starredLabel'
+        / = hb 'if hours_of_operation' do
+        /   .map-hours
+        /     %h5.hours
+        /       ="Monday & Wednesday"
+        /       %span="10am - 7pm"
+        /       %br
+        /       ="Thursday & Tuesday"
+        /       %span="10am - 7pm"
+        /       %br
+        /       ="Friday & Saturday"
+        /       %span="10am - 7pm"
+        /       %br
+        /       ="Sunday"
+        /       %span="Closed"
+        / %hr/
+        / %p=hb 'description'
+        / =hb 'if clean_bathroom_indicator' do
+        /   %h5.facilities
+        /     %span.icomoon-tag 
+        /       %span="Clean Bathrooms"          
+        / =hb 'if age_group' do
+        /   %h5.age-group
+        /     Recommended for ages
+        /     %span="5-15"
+        / .share
+        /   %button.btn.btn-icomoon.followed
+        /     %span.icomoon-envelope
+        /     Share
+        /   %button.btn.btn-icomoon    
+        /     %span.icomoon-star 
+        /     Saved      
+
+#place-events
+  %h2 Who Publishes Here
+  %hr/
+  =hb "each publishers" do
+    =hb 'view V3RedroverWebsite.PublisherRowView'
+    / Events happening at
+    / =hb 'name'
+  / .row
+  /   =hb '#each events'
+  /   =hb 'view V3RedroverWebsite.EventAtPlaceView'
+  /   =hb '/each'
+
+=hb "if V3RedroverWebsite.currentUser.isLoggedIn" do
+  =hb "view V3RedroverWebsite.PlaceCommentsView"

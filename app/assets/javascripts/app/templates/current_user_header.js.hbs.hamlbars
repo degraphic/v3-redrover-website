@@ -1,0 +1,19 @@
+%ul#user-menu.nav.pull-right
+  %li.dropdown
+    %a#user_options.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", :_action => 'toggleUserMenu target="parentView"'}
+      =hb 'view.currentUser.abbreviated_name'
+      %img.profile_pic{:bind => { :src => 'V3RedroverWebsite.currentUser.profile_picture_thumb' }}
+      %b.caret  
+      %ul.dropdown-menu#user-dropdown
+        %li
+          %a{_action: 'goToMyRedrover href=true'} My RedRover
+        %li
+          %a#settings_option{_action: "goToSettings href=true", href:"#"}
+            Settings
+        %li
+          %a{:href => "#"} Find/Invite Friends
+        %li
+          %a{:href => "#"} Help
+        %li.divider
+        %li
+          %a.LP-logout{:_action => 'logOut target="parentView"', :href => "#"} Log Out

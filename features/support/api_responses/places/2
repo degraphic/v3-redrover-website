@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "place": {
+      "id": 271,
+      "name": "Chatham Square Library",
+      "website_url": "http://foursquare.com/venue/137406",
+      "age_range": null,
+      "hours_of_operation": null,
+      "phone_number": "2129982500",
+      "description": null,
+      "clean_bathroom_indicator": null,
+      "image_thumb": "http://localhost:9090/library.png",
+      "image_medium": "http://localhost:9090/library.png",
+      "street_address": "33 East Broadway",
+      "city": "New York",
+      "state": "NY",
+      "zipcode": "10002-6804",
+      "lat_lon": "40.7135939598084,-73.99667",
+      "follower_users": [4],
+      "count_followers": 0,
+      "categories": []
+    }
+  }
+}

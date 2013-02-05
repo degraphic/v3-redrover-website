@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "publishers": [{
+      "id": 1,
+      "title": "Jazz at Lincoln Center",
+      "description": "Jazz at Lincoln Center is a 501(c)3 not-for-profit dedicated to inspiring and growing audiences for jazz.",
+      "website_url": "http://www.jalc.org/concerts/c_calendar09.asp",
+      "created_at": "2012-05-17T21:29:52Z",
+      "name_of_contact": "Scott Thompson",
+      "phone_number": "(212) 258-9800",
+      "email_of_contact": "sthompson@jalc.org",
+      "auto_follow": true,
+      "image_thumb": "http://s3.amazonaws.com/rr-staging/production/publishers/thumb/31/JALC.jpg?1352216514",
+      "image_medium": "http://s3.amazonaws.com/rr-staging/production/publishers/medium/31/JALC.jpg?1352216514",
+      "count_followers": 0,
+      "address": "33 W 60th St # 11",
+      "categories": [{
+        "id": 20,
+        "name": "Literary",
+        "icon": "http://staging-api.redroverapp.com/categories/missing_mobile_app.png",
+        "icon_normal": "http://staging-api.redroverapp.com/categories/missing_medium.png"
+      }]
+    }, {
+      "id": 2,
+      "title": "The Jewish Museum",
+      "description": "The Jewish Museum of New York offers acclaimed exhibitions exploring art & culture from ancient to modern times.",
+      "website_url": "",
+      "created_at": "2012-10-29T22:25:34Z",
+      "name_of_contact": "",
+      "phone_number": "(212) 423-3200",
+      "email_of_contact": "",
+      "auto_follow": false,
+      "image_thumb": "http://s3.amazonaws.com/rr-staging/production/publishers/thumb/129/WEBSITE_LOGO.jpg?1352489281",
+      "image_medium": "http://s3.amazonaws.com/rr-staging/production/publishers/medium/129/WEBSITE_LOGO.jpg?1352489281",
+      "count_followers": 0,
+      "address": "1109 5th Avenue ",
+      "categories": [{
+        "id": 15,
+        "name": "Museum",
+        "icon": "http://staging-api.redroverapp.com/categories/missing_mobile_app.png",
+        "icon_normal": "http://staging-api.redroverapp.com/categories/missing_medium.png"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,8 @@
+%h2 My Upcoming Event
+.row
+  =hb '#each rows'
+  .row
+    =hb '#each this'
+    =hb 'view V3RedroverWebsite.StarredEventView'
+    =hb '/each'
+  =hb '/each'

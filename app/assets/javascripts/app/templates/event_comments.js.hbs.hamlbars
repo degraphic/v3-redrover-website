@@ -1,0 +1,22 @@
+#comments.span15
+  %h2 
+    Everyone's 2c
+    %span.icomoon-2cent
+  %hr/
+  .row.requests  
+    =hb "each comments" do
+      =hb "view V3RedroverWebsite.EventCommentView"
+
+
+  #add_comment.span15
+    .comment_view
+      %img{bind: {src: "V3RedroverWebsite.currentUser.profile_picture_thumb"} }
+      .comment_contents.span12
+        %h4.name=hb "V3RedroverWebsite.currentUser.full_name"
+        %form 
+          %textarea#commentContent.span12{:rows => "3"}
+          %span.icomoon-camera.pull-left
+          .btn.btn-cents#addCommentButton.pull-right{_action: 'addComment on="click" target="view"'}
+            %text add your    
+            %i.icon-cents
+ 

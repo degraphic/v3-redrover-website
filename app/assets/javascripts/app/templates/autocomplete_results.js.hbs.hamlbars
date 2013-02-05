@@ -1,0 +1,18 @@
+%ul.search_results
+  %li.title Events
+  %img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.visibility'} }
+  =hb '#each results'
+  =hb 'view V3RedroverWebsite.SearchResultView'
+  =hb '/each'
+  %li.more
+    %p
+      %a{:_action => 'goToFullSearchPage target="parentView"', :href => "#"}
+        See more results from
+        %span
+          "
+          =hb 'text'
+          "
+    %p
+      Displaying top 
+      %span="8"
+      results.

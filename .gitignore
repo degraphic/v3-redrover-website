@@ -1,0 +1,14 @@
+.rvmrc*
+tmp/**/*
+/log/**
+/tmp/*
+*.cache
+*.log
+*.pid
+.DS_Store
+log/*
+*/**.DS_Store
+.log
+public/assets
+coverage/**
+.tddium*

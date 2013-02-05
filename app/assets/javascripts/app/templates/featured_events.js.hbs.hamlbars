@@ -1,0 +1,7 @@
+=hb "view V3RedroverWebsite.SearchPanelView"
+%img{:src => '/assets/spinner-dark.gif', :bind => { :class => 'view.visibility'} }
+
+#featured-events-list
+  .row
+    =hb 'each controller' do
+      =hb 'view V3RedroverWebsite.FeaturedEventView'

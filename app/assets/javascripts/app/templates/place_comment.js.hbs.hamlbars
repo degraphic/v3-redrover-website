@@ -1,0 +1,11 @@
+.comment_view
+  %a{ :_action => 'goToUser user href=true' }
+    %img{bind: {src:"user.profile_picture_thumb"}, alt: "profile"}
+  .comment_contents.span18
+    %h4.name
+      =hb "#with user"
+      =hb "full_name"
+      =hb "/with "
+    %h5.time=hb "time_ago_in_words" 
+    %p.comment=hb "content"      
+%hr/

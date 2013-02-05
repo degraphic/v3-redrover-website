@@ -1,0 +1,14 @@
+.saved-place
+  %a{:_action => 'goToPlace this href=true'}
+    .inner.row
+      .type.span3
+        %img{:bind => {:src => 'image_thumb'}}
+        %h4 Library
+      .header.span4
+        %h3= hb 'name'
+        %h4= hb 'street_address'
+        %h4
+          =hb 'city' 
+          = precede ', ' do
+            =hb 'state'
+        %h5= hb 'phone_number'

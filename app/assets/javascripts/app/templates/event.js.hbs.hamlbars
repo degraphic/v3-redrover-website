@@ -1,0 +1,80 @@
+.row    
+  #event-detail.span21
+    .row
+      .image.span21
+        .wrap
+          %img{:bind => { :src => 'image_original' } }
+      .span21.rel
+        =hb '#with publisher'
+        %a{:_action => 'goToPublisher this href=true'}
+          %img.publisher{:bind => { :src => 'image_medium' } }
+        =hb '/with'
+        =hb "if V3RedroverWebsite.currentUser.isLoggedIn" do
+          #icalendar-container.hide
+          %span{bind: { :class => "view.starredClass", 'data-content' => "view.calendarDropDown" }, "data-original-title" => "", :href => "#", :rel => "popover"}
+
+      .info.span15
+        .row
+          .header.span15
+            =hb '#with place'
+            %a{:_action => 'goToPlace this href=true'}
+              %h5.place=hb 'name'
+            =hb '/with'
+            %h2.title=hb 'title'
+            %h5.date
+              =hb 'formatDate start_date'
+              ="-"
+              =hb 'formatTime start_time'
+            %hr.no-bottom.no-top/ 
+          .span15
+            %p=hb 'description'
+            %h3.category
+              = hb "if categories" do
+                %span
+                  %img{bind:{src: "categories.0.icon"}} 
+                  Category:
+                  %span=hb 'firstCategory categories'
+              =hb "if  ticketing_url" do
+                %a.btn.purchase{target: "_blank" , bind: {href: "ticketing_url"}} Purchase Tickets
+            %hr/
+            .bottom
+              .row
+                .map-info.span6
+                  =hb '#with place'
+                  %h5.address.rel
+                    %a{:_action => 'goToPlace this href=true'}
+                      =hb 'name'
+                    %br/
+                    =hb 'street_address'
+                    %br/
+                    =hb 'city'
+                    ,
+                    =hb 'state'
+                    =hb 'zipcode'
+                    %span.icomoon-location
+                  =hb "#if phone_number"
+                  %h5.rel.phone
+                    =hb 'phone_number'
+                    %span.icomoon-phone
+                  =hb '/if'
+                  =hb '/with'
+                  %h5.donation
+                    ='Would you like to make a'
+                    ='donation to this organization?'
+                    %a{:href => "#"} Click here
+                .map.span8
+
+            %hr/
+            =hb "#if V3RedroverWebsite.currentUser.isLoggedIn"
+            =hb 'view V3RedroverWebsite.EventCommentsView'
+            =hb "/if"
+
+      #more-events.span6
+        .well
+          %h4 Nearby Before & After
+          %hr/
+          .more-events-scroll
+            =hb '#each beforeAndAfter'
+            =hb 'view V3RedroverWebsite.BeforeAndAfterView'
+            =hb '/each'
+        .more &#x25BC;

@@ -1,0 +1,74 @@
+// font colors
+$font_normal: #333333
+$font_light: #666666
+
+$teal: #009999
+$teal_hover: #000000
+$teal_active: #C53830
+$teal_disabled: #93C6C6
+
+// nav styles
+$nav_base: #D8F1F7
+
+$search-border: #d4d4d4
+
+// my mixins
+=rel 
+  position: relative
+
+.rel
+  +rel
+
+=abs-l($top, $left)
+  position: absolute
+  top: $top
+  left: $left
+
+=abs-r($top, $right)
+  position: absolute
+  top: $top
+  right: $right
+  
+=dim($width, $height)
+  width: $width
+  height: $height
+  
+=zero
+  margin: 0
+  padding: 0
+  
+=bs 
+  +box-shadow(0 0 2px gray) 
+
+=link-color($color)
+  color: $color
+  &:hover
+    color: lighten($color, 10%) 
+
+    
+// typography
+=museo 
+  font-family: 'MuseoSlab500Regular'
+
+=futura 
+  font-family: 'futura-pt'
+  
+@font-face
+  font-family: 'MuseoSlab500Regular'
+  font-weight: normal
+  font-style: normal  
+  src: asset_url("Museo_Slab_500-webfont.eot", font), asset_url('Museo_Slab_500-webfont.eot?#iefix', font) format("embedded-opentype"), asset_url('Museo_Slab_500-webfont.woff', font) format("woff"), asset_url('Museo_Slab_500-webfont.ttf', font) format("truetype"), asset_url('Museo_Slab_500-webfont.svg#MuseoSlab500Regular', font) format("svg")
+
+@font-face
+  font-family: 'FuturaT'
+  src: asset_url('FuturaT.ttf', font) format("truetype"), asset_url('FuturaT_bold.ttf', font) format("truetype")
+  
+
+.wf-loading .blog-title,
+.wf-loading .post-title 
+  /* Hide the blog title and post titles while web fonts are loading */
+  visibility: hidden
+
+  
+pre.prettyprint.linenums
+  display: none

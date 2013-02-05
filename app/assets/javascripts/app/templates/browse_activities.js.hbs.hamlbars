@@ -1,0 +1,10 @@
+<h1>Who’s Doing What</h1>
+
+= hb 'test'
+
+= hb 'each content' do
+  .activity
+    = hb 'view V3RedroverWebsite.ActivityRowView'
+
+
+

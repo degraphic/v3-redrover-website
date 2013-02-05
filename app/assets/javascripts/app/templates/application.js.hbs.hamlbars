@@ -1,0 +1,39 @@
+.cover
+%header
+  =hb 'view V3RedroverWebsite.HeaderView'
+.container
+  .row
+    .span3
+      #nav
+        =hb 'view V3RedroverWebsite.NavigationView'
+    .span21
+      =hb 'view V3RedroverWebsite.AlertView'
+      =hb :outlet
+.press_footer
+  %ul
+    %li
+      .img.nyt
+    %li
+      .img
+    %li
+      .img.mom
+    %li
+      .img.fastco
+    %li
+      .img.giga
+%footer
+  .container.footer-content
+    .row  
+      %ul
+        %li   
+          %a{:href => '#'} About
+        %li   
+          %a{:href => '#'} Jobs
+        %li   
+          %a{:href => '#'} Blog
+        %li   
+          %a{:href => '#'} FAQs      
+        %li   
+          %a{:href => '#'} Feedback      
+        %li   
+          %a{:href => '#'} Terms & Conditions    

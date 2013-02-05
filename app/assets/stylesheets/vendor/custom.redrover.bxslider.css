@@ -1,0 +1,14 @@
+.bx-wrapper {
+
+  margin: 0 !important;
+  
+  .bxslider {
+    transform: none !important;
+    margin: 0 !important;
+    padding:0;
+
+    .bx-wrapper .bx-viewport {left: 0px !important;}
+
+    li {list-style-type:none;}
+  }
+}

@@ -1,0 +1,50 @@
+#publisher-detail
+  img.pub 
+    +box-shadow(0 0 4px rgba(0,0,0,.3))
+    border: 2px solid white
+    width: 100%
+  .publisher-links 
+    margin-bottom: 10px 
+    a
+      color: lighten($grayLight, 10%)
+      &:hover
+        color: $teal 
+        span:before
+          color: $teal 
+    span:before 
+      font-size: 20px 
+  .publisher-info 
+    +rel 
+    left: 6px
+    h2
+      margin: -.2em 0 0 
+    .icomoon-star:before
+      color: red
+    p.follow 
+      margin-top: 0
+      color: lighten($teal, 5%)
+    p 
+      margin: .4em 0 .8em
+  .icomoon-share:before
+    font-size: 40px 
+    color: lighten($grayLight, 25%)
+    text-shadow: 0 -1px 1px rgba(black, .6)
+    top: 0px
+  .detail_view
+    margin-bottom: 20px
+    min-height: 0
+    .image 
+      height: 260px
+    .publisher-event-info
+      color: $grayLight
+      font-size: 10px
+      .date
+        float: right
+    .wrap 
+      width: 100%
+      height: auto
+    .header 
+      +box-sizing(border-box)
+      padding: 10px 10px 0 10px
+      .title 
+        min-height: 66px

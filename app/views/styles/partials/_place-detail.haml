@@ -1,0 +1,154 @@
+:javascript 
+  $(function(){
+
+    $('.publisher-view').click(function(){
+      var eventrow = $('#place-events > .row').last();
+
+      $('.publisher-view span').each(function(){
+        $(this).toggleClass('hide');
+      });
+
+      if (eventrow.hasClass('hidden')){
+        eventrow.removeClass('hidden').slideDown();
+        $('.publisher-view .caret').addClass('up');
+      }
+      else {
+        eventrow.addClass('hidden').slideUp();
+        $('.publisher-view .caret').removeClass('up');
+      }
+      
+    });
+  });
+
+%h1.title Place Detail Page
+#place-detail
+  .info
+    .row
+      .map.span21
+        %iframe{:frameborder => "0", :height => "100%", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Saratoga+Library+Brooklyn+NY&aq=0&oq=ameri&sll=40.676472,-73.979187&sspn=0.595741,1.19751&ie=UTF8&hq=Saratoga+Library+Brooklyn+NY&hnear=&radius=15000&t=m&spn=0.020277,0.052357&z=13&output=embed&iwloc=near", :width => "100%"}
+    .place-detail-bottom.row
+      .type.span4
+        = image_tag('place-icons/library.png')
+        %h3="Library"
+      .span10.rel      
+        .header
+          %h2.title="Melrose Library"
+        .place-info 
+          %h3.rel              
+            %a{:href => '#'}
+              ="910 Morris Avenue, (at E. 162nd St.)"
+              %br/
+              ="Bronx New York, NY"
+              %span.icomoon-location             
+          %h5.rel
+            ="(718)-555-5555"
+            %span.icomoon-phone
+      .span7.connect
+        %span.icomoon-share
+        %span.icomoon-star.active{"data-content" => "<ul id='save-calendar'class='calendar'><li><a href='#'>Save On RedRover</a></li><li class='divider'></li><li id='add-to-calendar'><a>Add to Calendar Tool</a><b class='caret up'></b></li><div class='add-to-calendar'><li><a href='#' target='undefined' title='Google'><span>Google</span></a></li><li><a href='#' title='iCalendar'><span>iCalendar</span></a></li><li><a href='#' title='Outlook'><span>Outlook</span></a></li><li><a href='#' target='undefined' title='Yahoo'><span>Yahoo</span></a></li></div></ul>", "data-original-title" => "", :href => "#", :rel => "popover"}
+
+#place-events
+  %h2 Who Publishes Here
+  %hr/
+  .row 
+    .place-publisher.span4
+      = image_tag('nypl.jpg')
+      %button.btn.btn-follow.following
+        %span.follow="Follow"
+        %span.following="Following"
+        %span.unfollow="Unfollow"
+    .place-publisher-events.span17
+      .row 
+        .arrow.span1
+          %span.icomoon-leftarrow
+
+
+        .event-carousel.span15
+          .row
+            - 5.times do
+              .span5
+                .detail_view
+                  = image_tag('place-event.jpg')
+                  .header
+                    .title 
+                      %h5.title="Amazing World of Animals"
+                    %hr/
+                    .date="12/22 10:00 am"
+              .span5
+                .detail_view
+                  = image_tag('kids.jpg')
+                  .header
+                    .title 
+                      %h5.title="Kids playing on a grassy field"
+                    %hr/
+                    .date="12/22 10:00 am"
+
+                    
+        .arrow.span1
+          %span.icomoon-rightarrow  
+  .row 
+    .place-publisher.span4
+      = image_tag('moma.jpg')
+      %button.btn.btn-follow.following
+        %span.follow="Follow"
+        %span.following="Following"
+        %span.unfollow="Unfollow"
+    .place-publisher-events.span17
+      .row 
+        .arrow.span1
+          %span.icomoon-leftarrow
+        .event-carousel.span15
+          .row
+            - 5.times do
+              .span5
+                .detail_view
+                  = image_tag('kids.jpg')
+                  .header
+                    .title 
+                      %h5.title="Kids playing on a grassy field"
+                    %hr/
+                    .date="12/22 10:00 am"
+              .span5
+                .detail_view
+                  = image_tag('place-event.jpg')
+                  .header
+                    .title 
+                      %h5.title="Amazing World of Animals"
+                    %hr/
+                    .date="12/22 10:00 am"
+        .arrow.span1
+          %span.icomoon-rightarrow
+  %hr.no-bottom/
+  .publisher-view
+    ="Show" 
+    %span.more.hide="More" 
+    %span.fewer="Fewer" 
+    ="Publishers"
+    %b.caret.up      
+
+#comments
+  %h2 
+    Everyone's 
+    %span.icomoon-2cent
+  %hr/
+  .row.requests          
+    - 1.times do
+      .span21
+        .comment_view 
+          = image_tag('profile.jpg')
+          .comment_contents.span18
+            %h4.name="Sally M."
+            %h5.time="4 hours ago" 
+            %p.comment="Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor."      
+        %hr/
+    #add_comment.span21
+      .comment_view 
+        = image_tag('profile.jpg')
+        .comment_contents.span12
+          %h4.name="Kathryn T."
+          %form 
+            %textarea.span12{:rows => "3", :placeholder => "Add your 2¢"}
+            %span.icomoon-camera.pull-left
+            .btn.btn-cents.pull-right
+              %text add your    
+              %i.icon-cents

@@ -1,0 +1,13 @@
+.detail_view
+  %a{:_action => 'goToEvent this href=true'}
+    .detail-image
+      %img{:bind => { :src => 'image_medium' } }
+    .header
+      .sale=hb 'place.name'
+      .title=hb 'title'
+      .detail-address= hb 'publisher.title'
+      .detail-date
+        =hb 'formatDate start_date'
+        %br/
+        =hb 'formatTime start_time'
+%hr/

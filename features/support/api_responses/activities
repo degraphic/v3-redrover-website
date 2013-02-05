@@ -1,0 +1,144 @@
+{
+    "status": "success",
+    "code": "API_SUCCESS",
+    "message": "The operation was successful",
+    "data": {
+        "activities": [{
+            "id": 1579,
+            "activity_type": "saved event",
+            "user": {
+                "id": 106,
+                "full_name": "Petrica Martinescu",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "Event",
+            "actionable": {
+                "id": 80245,
+                "title": "Hindu and Buddhist Vision in Indian and Southeast Asian Art",
+                "image_thumb": "http://staging-api.redroverapp.com/events/missing_thumb.png"
+            },
+            "time_ago_in_words": "23 minutes ago",
+            "action_content": null
+        }, {
+            "id": 1577,
+            "activity_type": "saved place",
+            "user": {
+                "id": 106,
+                "full_name": "Petrica Martinescu",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "Place",
+            "actionable": {
+                "id": 117,
+                "name": "Scripps Miramar Ranch Branch Library",
+                "image_thumb": "http://s3.amazonaws.com/rr-staging-api/production/places/thumb/117/category_libraries.png?1357634744"
+            },
+            "time_ago_in_words": "39 minutes ago",
+            "action_content": null
+        }, {
+            "id": 1576,
+            "activity_type": "place commented",
+            "user": {
+                "id": 106,
+                "full_name": "Petrica Martinescu",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "Place",
+            "actionable": {
+                "id": 117,
+                "name": "Scripps Miramar Ranch Branch Library",
+                "image_thumb": "http://s3.amazonaws.com/rr-staging-api/production/places/thumb/117/category_libraries.png?1357634744"
+            },
+            "time_ago_in_words": "44 minutes ago",
+            "action_content": {
+                "id": 154,
+                "content": "commented place",
+                "image_thumb": "http://staging-api.redroverapp.com/comments/missing_thumb.png",
+                "image_medium": "http://staging-api.redroverapp.com/comments/missing_medium.png",
+                "with_image": false,
+                "action_content_type": "comment"
+            }
+        }, {
+            "id": 1784,
+            "activity_type": "friendship accepted",
+            "user": {
+                "id": 93,
+                "full_name": "Syed Ahmed",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "User",
+            "actionable": {
+                "id": 73,
+                "full_name": "Razvan Irimia",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "male"
+            },
+            "time_ago_in_words": "2 days ago",
+            "action_content": null
+        }, {
+            "id": 1785,
+            "activity_type": "friendship declined",
+            "user": {
+                "id": 93,
+                "full_name": "Syed Ahmed",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "User",
+            "actionable": {
+                "id": 73,
+                "full_name": "Razvan Irimia",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "male"
+            },
+            "time_ago_in_words": "2 days ago",
+            "action_content": null
+        }, {
+            "id": 1786,
+            "activity_type": "friend request sent",
+            "user": {
+                "id": 93,
+                "full_name": "Syed Ahmed",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "User",
+            "actionable": {
+                "id": 73,
+                "full_name": "Razvan Irimia",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "male"
+            },
+            "time_ago_in_words": "2 days ago",
+            "action_content": null
+        }, {
+            "id": 1544,
+            "activity_type": "event commented",
+            "user": {
+                "id": 106,
+                "full_name": "Petrica Martinescu",
+                "profile_picture_thumb": "http://staging-api.redroverapp.com/users/missing_thumb.png",
+                "gender": "M"
+            },
+            "actionable_type": "Event",
+            "actionable": {
+                "id": 76453,
+                "title": "Resume Writing and on-Line Job Search Workshop",
+                "image_thumb": "https://s3.amazonaws.com/rr-staging-api/production/events/thumb/76453/20110319-69556_1-loulou.jpg?1356898130"
+            },
+            "time_ago_in_words": "2 days ago",
+            "action_content": {
+                "id": 152,
+                "content": "ttsdaf",
+                "image_thumb": "http://staging-api.redroverapp.com/comments/missing_thumb.png",
+                "image_medium": "http://staging-api.redroverapp.com/comments/missing_medium.png",
+                "with_image": false,
+                "action_content_type": "comment"
+            }
+        }]
+    }
+}

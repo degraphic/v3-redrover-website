@@ -1,0 +1,33 @@
+{
+  "status":"success",
+  "code":"API_SUCCESS",
+  "message":"The operation was successful",
+  "data":{
+    "user":{
+      "id":1,
+      "email":"userprofile@test.com",
+      "first_name":"User",
+      "last_name":"profile name",
+      "profile_picture_thumb":"http://staging-api.redroverapp.com/users/missing_thumb.png",
+      "profile_picture_medium":"http://staging-api.redroverapp.com/users/missing_medium.png",
+      "gender":null,
+      "bio":"User profile bio",
+      "latitude":null,
+      "longitude":null,
+      "feeds_i_follow_privacy":"friends",
+      "people_i_follow_privacy":"friends",
+      "following_me_privacy":"all",
+      "my_saved_places_privacy":"friends",
+      "my_saved_events_privacy":"friends",
+      "my_2_cent_privacy":"all",
+      "comments_notifications":"mail",
+      "invitation_notifications":"mail",
+      "common_saved_events_notifications":"mail",
+      "new_user_follow_me_notifications":"mail",
+      "comments_count":0,
+      "following_count":0,
+      "followers_count":0,
+      "starred_by_current_user": true
+    }
+  }
+}

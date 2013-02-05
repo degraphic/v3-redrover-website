@@ -1,0 +1,212 @@
+// button styles
+.btn
+  +futura
+  +transition(.2s all)
+  &:focus
+    outline: none
+
+.btn-plan, .btn-cents, .btn-filter
+  text-transform: uppercase
+.btn-plan, .btn-cents
+  +border-radius(8px)
+  +box-shadow(0 0 1px rgba(0,0,0,.3))
+  line-height: 40px
+  i, text
+    vertical-align: middle
+  i
+    display: inline-block
+    +ie7-restore-right-whitespace
+    background-image: image_url('btn_icons.png')
+    background-repeat: no-repeat
+    margin: 0
+    &.icon-plan
+      background-position: 0 0
+      +dim(50px, 40px)
+    &.icon-cents
+      background-position: -50px 0
+      +dim(30px, 40px)  
+
+.btn-plan
+  padding: 2px 10px  
+  font-size: 23px
+  text-transform: none
+
+.btn-cents
+  padding: 0px 10px
+
+.btn-primary  
+  font-weight: normal
+  +buttonBackground($teal, darken($teal, 5%))
+
+.btn-header
+  +buttonBackground(lighten($teal, 10%), lighten($teal, 5%))
+  margin-left: 20px
+
+.btn-email
+  +buttonBackground(lighten(#429A97, 10%),#429A97)
+
+.btn-fb
+  +buttonBackground(lighten(#3A5794, 10%),#3A5794)
+
+.btn-tw
+  +buttonBackground(lighten(#43C5F5, 10%),#43C5F5)
+
+.btn-login, 
+  +border-radius(50px)
+  padding: 4px
+  &:before
+    font-size: 20px  
+    top: -1px
+
+.btn-signup
+  width: 242px
+  margin-bottom: 10px
+  font-size: 20px
+  text-align: left
+  &.btn-fb
+    &:before
+      top: -1px
+      right: 4px        
+  &.btn-tw
+    &:before
+      top: -1px
+      right: 6px        
+  &.btn-email
+    &:before
+      right: 6px
+      font-size: 30px
+
+.btn-settings
+  font-size: 18px
+  width: 190px
+
+.btn-set-modal
+  font-size: 20px
+  padding: 10px 20px
+
+.btn-follow,
+.btn-accept
+  font-size: 18px
+  +dim(100px, 32px)
+  margin-right: 20px
+  [class^="icomoon-"]:before, 
+  [class*="icomoon-"]:before
+    font-size: 12px
+    top: -2px
+    left: -4px
+  span.following,
+  span.unfollow,
+    display: none
+  &.following
+    span.following 
+      display: block
+    span.follow
+      display: none
+    &:hover 
+      span.unfollow 
+        display: block 
+      span.following 
+        display: none
+  &.accepted  
+    span.follow
+      display: none
+    span.following
+      display: block
+      &:before
+        color: white
+
+.btn-follow.following
+  +buttonBackground($teal, darken($teal, 5%))
+  color: white
+  
+.btn-icomoon
+  padding: 7px 14px 2px
+  .icomoon-star:before
+    color: gray  
+  &.saved
+    .icomoon-star:before
+      color: red
+
+.btn-group
+  .caret
+    border-top: 4px solid white
+  .btn.btn-primary.dropdown-toggle
+    &:hover, &:active
+      background: darken($teal, 5%)  
+  &.open
+    .btn.btn-primary.dropdown-toggle      
+      background: darken($teal, 5%)     
+
+.dropdown.open .dropdown-toggle
+  +gradient-vertical(white, darken(white, 5%))
+  +box-shadow(inset 0 3px 8px rgba(0, 0, 0, 0.125))
+
+.dropdown-menu
+  background: #F7F7F7
+  +futura
+  text-transform: uppercase
+  +border-radius(0)
+  &:before,
+  &:after
+    border: none !important
+    content: none !important           
+.dropdown-menu li > a
+  color: #999999  
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a
+  background: #81C6D2
+  color: white
+  text-shadow: 0 1px 1px gray
+
+// alert styles
+.alert-default
+  background-color: #D5EBEA
+  border-color: darken(#D5EBEA, 20%)
+  color: #2B9A94
+  &.callout 
+    border: 0
+    button.close 
+      color: darken(#D5EBEA, 20%)
+      text-align: 0 -1px 0 gray 
+      +opacity(80)
+    p
+      text-align: center
+      font-size: 24px 
+      padding: 0
+      margin: 0
+      color: #2B9A94
+      span 
+        position: relative
+        top: 3px
+      button 
+        font-size: 22px
+        padding: 10px 20px
+        display: inline-block
+        margin: 0 10px
+
+.btn-group.filter button
+  text-transform: uppercase
+  padding: 10px 24px
+  font-size: 20px
+  +border-radius(2px)
+  &.active
+    color: $teal  
+    
+// labels
+.label, .badge
+  +futura
+  text-shadow: none
+  font-weight: normal
+  
+// progress bars
+.progress-info .bar, .progress .bar-info
+  +gradient-vertical(lighten($teal, 5%), $teal)
+
+.progress-info.progress-striped .bar, .progress-striped .bar-info
+  +gradient-striped($teal)
+
+.progress .bar
+  width: 20%
+  &:hover 
+    width: 100%

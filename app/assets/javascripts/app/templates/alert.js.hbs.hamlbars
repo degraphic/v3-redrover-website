@@ -1,0 +1,2 @@
+%button.close{:type => "button", :_action => 'hide target="view"'} ×
+%strong= hb 'message'

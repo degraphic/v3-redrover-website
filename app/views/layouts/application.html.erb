@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RedRover</title>
+  <%= stylesheet_link_tag "application", :media => "screen" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="//use.typekit.net/edt2lwa.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/edt2lwa.js"></script>
+
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">
+    window.googleMapsIsInitialized = true;
+    function googleMapsInit() {
+      window.googleMapsIsInitialized = true;
+    };
+
+  </script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&key=<%= Rails.application.config.google_maps_api_key%>&libraries=places"></script>
+  <script src="//platform.twitter.com/anywhere.js?id=<%= Rails.application.config.twitter.id %>&v=1&oauth_callback=http%3A%2F%2F127.0.0.1:3000" type="text/javascript"></script>
+
+  <script>
+    // Additional JS functions here
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : V3RedroverWebsite.Config.facebook.id, // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+
+      // Additional init code here
+
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       ref.parentNode.insertBefore(js, ref);
+     }(document));
+  </script>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="fb-root"></div>
+
+</body>
+
+</html>

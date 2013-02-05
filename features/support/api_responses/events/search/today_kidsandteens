@@ -1,0 +1,63 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "events": [{
+      "id": "1",
+      "title": "Today Event FOR KIDS",
+      "description": "Acclaimed sportswriter Buzz Bissinger and famed sports photographer Marvin E. Newman tell the story of Mickey Mantle\u2019s unforgettable career, illustrated with Newman\u2019s captivating iconic and behind-the-scenes photos. \r\nMantle has long been considered one of baseball\u2019s most memorable figures, and Bissinger and Newman go beyond the statistics to bring Mantle to life. \r\n\u00a0\r\nBrief Biographies\r\nBuzz Bissinger is the author of two classic works of sports journalism, Friday Night Lights and Three Nights in August. \r\nMarvin E. Newman\u2019s work has been exhibited at museums across the US, including the Metropolitan Museum of Art.",
+      "start_date": "2012-11-09",
+      "start_time": "12:00:00",
+      "end_date": null,
+      "end_time": "",
+      "minimum_age": null,
+      "maximum_age": null,
+      "cost": null,
+      "frequency_type": null,
+      "phone_number": null,
+      "event_url": "http://www.92y.org/Tribeca/Event/On-the-Classic-Mickey-Mantle",
+      "ticketing_url": null,
+      "redrover_details_url": "http://redroverapp.com/events/70447",
+      "publisher": {
+        "id": 3,
+        "title": "92Y",
+        "image_thumb": "http://localhost:9090/NYPL_logo.jpg",
+        "image_medium": "http://localhost:9090/NYPL_logo.jpg",
+        "primary_place": null,
+        "deactivated": false
+      },
+      "image_thumb": "http://localhost:9090/missing_thumb.png",
+      "image_medium": "http://localhost:9090/missing_medium.png",
+      "follower_users": [],
+      "count_followers": 0,
+      "categories": [{
+        "id": 27,
+        "name": "Drop-in Classes",
+        "icon": "http://localhost:9090/category_icon.png",
+        "icon_normal": "http://localhost:9090/category_icon.png"
+      }],
+      "place": {
+        "id": 638,
+        "name": "92YTribeca",
+        "website_url": "http://www.92YTribeca.org",
+        "age_range": null,
+        "hours_of_operation": null,
+        "phone_number": "2126011000",
+        "description": null,
+        "clean_bathroom_indicator": null,
+        "image_thumb": "http://localhost:9090/missing_place_thumb.png",
+        "image_medium": "http://localhost:9090/missing_place_thumb.png",
+        "street_address": "200 Hudson St.",
+        "city": "New York",
+        "state": "NY",
+        "zipcode": "10013",
+        "lat_lon": "40.7230698287606,-74.0079522490067",
+        "follower_users": [],
+        "count_followers": 0,
+        "categories": []
+      }
+    } 
+    ]
+  }
+}

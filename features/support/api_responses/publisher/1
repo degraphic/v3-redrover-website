@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "code": "API_SUCCESS",
+  "message": "The operation was successful",
+  "data": {
+    "publisher": {
+      "id": 1,
+      "title": "The New York Public Library",
+      "description": "Inspire lifelong learning, advance knowledge, strengthen communities. ",
+      "website_url": "http://www.nypl.org",
+      "created_at": "2012-04-06T21:51:49Z",
+      "name_of_contact": "Johannes Neuer",
+      "phone_number": "",
+      "email_of_contact": "",
+      "auto_follow": true,
+      "image_thumb": "http://s3.amazonaws.com/rr-staging/production/publishers/thumb/1/NYPL_logo_temp.jpg?1352220257",
+      "image_medium": "http://s3.amazonaws.com/rr-staging/production/publishers/medium/1/NYPL_logo_temp.jpg?1352220257",
+      "count_followers": 1,
+      "address": " 476 5th Ave",
+      "categories": [{
+        "id": 20,
+        "name": "Literary",
+        "icon": "http://staging-api.redroverapp.com/categories/missing_mobile_app.png",
+        "icon_normal": "http://staging-api.redroverapp.com/categories/missing_medium.png"
+      }]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+#search-results
+  %h1 Search Results
+  %span.search-header.label All
+  .row.rel
+    .span15.results-wrap
+      %img{:src => '/assets/spinner.gif', :bind => { :class => 'view.visibility'} }
+      %ul.results-list
+        =hb '#each results'
+        =hb 'view V3RedroverWebsite.SearchResultView'
+        %hr/
+        =hb '/each'

@@ -1,0 +1,19 @@
+.activity.saved_place{:style => "margin-bottom: 20px; overflow: hidden;"}
+  .thumb.span3
+    %a{:_action => 'goToUser user href=true'}
+      %img.user_profile_picture{:bind => { :src => 'user.profile_picture_thumb'}}
+  .message.span17
+    %a{:_action => 'goToUser user href=true'}
+      = hb 'user.full_name'
+    added
+    %a{:_action => 'goToPlace actionable href=true'}
+      = hb 'actionable.name'
+    to
+    = hb 'view.hisOrHer'
+    saved places.
+
+    .media
+      %a{:_action => 'goToPlace actionable href=true'}
+        %img.actionable_picture{:bind => { :src => 'actionable.image_thumb'}}
+    .time
+      = hb 'time_ago_in_words'
